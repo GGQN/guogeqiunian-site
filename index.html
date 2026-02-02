@@ -14,6 +14,9 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- 标签页小图标 -->
+  <link rel="icon" type="image/png" href="logo.png" />
+
   <style>
     :root {
       --bg: #050709;
@@ -34,11 +37,13 @@
     }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
+
     .container {
       max-width: 1120px;
       margin: 0 auto;
       padding: 24px 16px 64px;
     }
+
     header {
       display: flex;
       align-items: center;
@@ -46,6 +51,7 @@
       gap: 12px;
       margin-bottom: 32px;
     }
+
     .logo-wrap {
       display: flex;
       align-items: center;
@@ -64,6 +70,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex: 0 0 auto;
     }
     .logo img{
       width: 100%;
@@ -77,6 +84,8 @@
       display: flex;
       gap: 18px;
       font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
     nav a {
       color: var(--text-soft);
@@ -106,6 +115,7 @@
       color: var(--text-soft);
       margin-bottom: 20px;
     }
+
     .hero-badges {
       display: flex;
       flex-wrap: wrap;
@@ -129,12 +139,14 @@
       background: var(--accent);
       box-shadow: 0 0 8px rgba(34,197,94,0.9);
     }
+
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
       align-items: center;
     }
+
     .btn {
       padding: 10px 18px;
       border-radius: 999px;
@@ -146,6 +158,8 @@
       gap: 8px;
       transition: all .18s ease;
       text-decoration: none;
+      user-select: none;
+      white-space: nowrap;
     }
     .btn-primary {
       background: linear-gradient(135deg, #06b6d4, #22c55e);
@@ -184,14 +198,14 @@
     .stat-row {
       display: flex;
       justify-content: space-between;
-      padding: 6px 0;
+      padding: 8px 0;
       border-bottom: 1px dashed rgba(55,65,81,0.7);
-      gap: 8px;
+      gap: 10px;
       align-items: center;
     }
     .stat-row:last-child { border-bottom: none; }
     .stat-label { color: var(--text-soft); }
-    .stat-value { font-weight: 500; }
+    .stat-value { font-weight: 500; display:flex; align-items:center; gap:10px; justify-content:flex-end; }
     .stat-contract {
       font-family: "SF Mono", Menlo, Consolas, monospace;
       font-size: 11px;
@@ -287,6 +301,7 @@
     @media (max-width: 768px) {
       header { flex-direction: column; align-items: flex-start; }
       .hero { grid-template-columns: minmax(0, 1fr); }
+      nav { justify-content:flex-start; }
     }
   </style>
 </head>
@@ -302,8 +317,8 @@
           <img src="logo.png" alt="过个球年">
         </div>
         <div>
-          <div style="font-weight: 700; color: var(--text);">过个球年</div>
-          <div style="font-size:12px;color:var(--text-soft);">GuoGeQiuNian · BNB Smart Chain</div>
+          <div style="font-weight:700; color:var(--text);">过个球年</div>
+          <div style="font-size:12px; color:var(--text-soft);">GuoGeQiuNian · BNB Smart Chain</div>
         </div>
       </a>
 
@@ -352,13 +367,12 @@
 
         <div class="stat-row">
           <span class="stat-label">合约地址</span>
-          <span class="stat-value" style="display:flex; align-items:center; gap:10px;">
+          <span class="stat-value">
             <span class="stat-contract" id="contractAddress">0x522798ddb5facf944e57400356fab78929104676</span>
             <button class="btn btn-outline" style="padding:6px 10px;font-size:12px;" onclick="copyCA()">📋 复制</button>
           </span>
         </div>
-        </div> 
-      
+
         <div class="stat-row">
           <span class="stat-label">链 & 标准</span>
           <span class="stat-value">BNB Smart Chain · BEP20</span>
@@ -405,23 +419,25 @@
         主要风险来自于市场波动本身。请务必做好自己的研究（DYOR），理性参与。
       </p>
     </section>
-<section id="howto">
-  <h2>如何购买 · How to Buy</h2>
 
-  <ol class="howto-steps">
-    ...
-  </ol>
+    <!-- 如何购买 -->
+    <section id="howto">
+      <h2>如何购买 · How to Buy</h2>
 
-  <div style="margin-top:12px;">
-    <a class="btn btn-primary"
-       href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x522798ddb5facf944e57400356fab78929104676"
-       target="_blank" rel="noopener">
-      ⚽ 立即去 PancakeSwap 购买
-    </a>
-  </div>
+      <ol class="howto-steps">
+        <li>1）准备钱包：使用 MetaMask / Trust Wallet 等，并确保钱包里有少量 BNB（用于购买与手续费）。</li>
+        <li>2）切换网络：把钱包网络切换到 <strong>BNB Smart Chain（BSC）</strong>。</li>
+        <li>3）打开交易页面：点击本官网的「去交易过个球年」，在 PancakeSwap 里会自动带入代币。</li>
+        <li>4）购买：输入要花的 BNB 数量 → 点击 Swap → 在钱包里确认交易。</li>
+      </ol>
 
-  <div class="risk-box">...</div>
-</section>
+      <div style="margin-top:12px;">
+        <a class="btn btn-primary"
+           href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x522798ddb5facf944e57400356fab78929104676"
+           target="_blank" rel="noopener">
+          ⚽ 立即去 PancakeSwap 购买
+        </a>
+      </div>
 
       <div class="risk-box">
         ⚠ 风险提示：加密资产价格波动极大，可能导致本金亏损。<br />
@@ -475,11 +491,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
