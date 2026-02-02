@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>过个球年 · 官方网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <meta name="description" content="过个球年，是部署在 BNB Smart Chain 上的节日 & 世界杯主题 Meme 代币，总量 10 亿，无增发。">
+  <meta name="description" content="过个球年，是部署在 BNB Smart Chain 上的节日 & 世界杯主题 Meme 代币，总量 10 亿，无增发。">
 
   <!-- 分享预览（朋友圈/推特） -->
   <meta property="og:title" content="过个球年 · 官方网站" />
@@ -13,8 +13,8 @@
   <meta property="og:url" content="https://ggqn.github.io/guogeqiunian-site/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
+
   <style>
-    
     :root {
       --bg: #050709;
       --card: #111827;
@@ -51,10 +51,10 @@
       align-items: center;
       gap: 12px;
     }
+    .logo-wrap:hover { opacity: .96; }
 
-    /* ✅ Logo 已替换为图片 */
     .logo{
-      width: 52px;         /* 想更大可改 60px / 64px */
+      width: 52px;
       height: 52px;
       border-radius: 50%;
       overflow: hidden;
@@ -68,7 +68,7 @@
     .logo img{
       width: 100%;
       height: 100%;
-      object-fit: contain; /* 不裁切，完整显示 */
+      object-fit: contain;
       display: block;
       padding: 2px;
     }
@@ -133,6 +133,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      align-items: center;
     }
     .btn {
       padding: 10px 18px;
@@ -186,6 +187,7 @@
       padding: 6px 0;
       border-bottom: 1px dashed rgba(55,65,81,0.7);
       gap: 8px;
+      align-items: center;
     }
     .stat-row:last-child { border-bottom: none; }
     .stat-label { color: var(--text-soft); }
@@ -251,6 +253,7 @@
       font-size: 14px;
       color: var(--text-soft);
       margin-top: 4px;
+      padding-left: 0;
     }
     .howto-steps li { margin-bottom: 6px; }
 
@@ -287,27 +290,30 @@
     }
   </style>
 </head>
+
 <body>
   <div id="top"></div>
   <div class="container">
+
     <!-- 顶部导航 -->
     <header>
-     <a class="logo-wrap" href="#top" style="text-decoration:none;">
-  <div class="logo">
-    <img src="logo.png" alt="过个球年">
-  </div>
-  <div>
-    <div style="font-weight: 700; color: var(--text);">过个球年</div>
-    <div style="font-size:12px;color:var(--text-soft);">GuoGeQiuNian · BNB Smart Chain</div>
-  </div>
-</a>
-<nav>
-  <a href="#about">项目介绍</a>
-  <a href="#tokenomics">代币信息</a>
-  <a href="#howto">如何购买</a>
-  <a href="#roadmap">路线图</a>
-  <a href="#community">社区</a>
-</nav>
+      <a class="logo-wrap" href="#top" style="text-decoration:none;">
+        <div class="logo">
+          <img src="logo.png" alt="过个球年">
+        </div>
+        <div>
+          <div style="font-weight: 700; color: var(--text);">过个球年</div>
+          <div style="font-size:12px;color:var(--text-soft);">GuoGeQiuNian · BNB Smart Chain</div>
+        </div>
+      </a>
+
+      <nav>
+        <a href="#about">项目介绍</a>
+        <a href="#tokenomics">代币信息</a>
+        <a href="#howto">如何购买</a>
+        <a href="#roadmap">路线图</a>
+        <a href="#community">社区</a>
+      </nav>
     </header>
 
     <!-- Hero 区域 -->
@@ -320,50 +326,53 @@
         </div>
 
         <div class="hero-badges">
-          <div class="badge">
-            <span class="badge-dot"></span> BNB Smart Chain · BEP20
-          </div>
+          <div class="badge"><span class="badge-dot"></span> BNB Smart Chain · BEP20</div>
           <div class="badge">总量：1,000,000,000 过个球年</div>
           <div class="badge">小数位：18</div>
         </div>
 
         <div class="hero-actions">
-          <!-- 这里的链接等你建好 Pancake 交易对再换，现在先留 # 占位 -->
           <a class="btn btn-primary"
-   href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x522798ddb5facf944e57400356fab78929104676"
-   target="_blank" rel="noopener">
-  ⚽ 去交易过个球年
-</a>
-          <div style="margin-top:10px;font-size:12px;color:var(--text-soft);">
-  提示：先连接钱包并切换到 BNB Smart Chain；若交易失败可把滑点调到 1%～5% 再试。
-</div>
-          <a class="btn btn-outline" href="#tokenomics">
-            📄 查看合约 & 详情
+             href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x522798ddb5facf944e57400356fab78929104676"
+             target="_blank" rel="noopener">
+            ⚽ 去交易过个球年
           </a>
+
+          <a class="btn btn-outline" href="#tokenomics">📄 查看合约 & 详情</a>
+
+          <div style="flex-basis:100%; margin-top:10px; font-size:12px; color:var(--text-soft);">
+            提示：先连接钱包并切换到 BNB Smart Chain；若交易失败可把滑点调到 1%～5% 再试。
+          </div>
         </div>
       </div>
 
       <!-- 右侧信息卡片 -->
       <div class="hero-card">
         <h3>合约关键信息</h3>
+
         <div class="stat-row">
           <span class="stat-label">合约地址</span>
-         <div style="display:flex; align-items:center; gap:10px; justify-content:flex-end;">
-  <span class="stat-value stat-contract" id="contractAddress">0x522798ddb5facf944e57400356fab78929104676</span>
-  <button class="btn btn-outline" style="padding:6px 10px;font-size:12px;" onclick="copyCA()">📋 复制</button>
-</div>
+          <span class="stat-value" style="display:flex; align-items:center; gap:10px;">
+            <span class="stat-contract" id="contractAddress">0x522798ddb5facf944e57400356fab78929104676</span>
+            <button class="btn btn-outline" style="padding:6px 10px;font-size:12px;" onclick="copyCA()">📋 复制</button>
+          </span>
+        </div>
+
         <div class="stat-row">
           <span class="stat-label">链 & 标准</span>
           <span class="stat-value">BNB Smart Chain · BEP20</span>
         </div>
+
         <div class="stat-row">
           <span class="stat-label">总发行量</span>
           <span class="stat-value">1,000,000,000 过个球年</span>
         </div>
+
         <div class="stat-row">
           <span class="stat-label">小数位</span>
           <span class="stat-value">18</span>
         </div>
+
         <div class="stat-row">
           <span class="stat-label">合约模板</span>
           <span class="stat-value">OpenZeppelin ERC20</span>
@@ -374,12 +383,8 @@
     <!-- 项目介绍 -->
     <section id="about">
       <h2>项目介绍 · About</h2>
-      <p>
-        「过个球年」是BNBChain上的中文meme币，源自网络热门话题"过个球年"，象征了对现实无奈但永不妥协的互联网精神。
-      </p>
-      <p>
-        在2026年中文meme爆发季，它代表了中国文化对年的重视，和对世界杯的展望。
-      </p>
+      <p>「过个球年」是BNBChain上的中文meme币，源自网络热门话题"过个球年"，象征了对现实无奈但永不妥协的互联网精神。</p>
+      <p>在2026年中文meme爆发季，它代表了中国文化对年的重视，和对世界杯的展望。</p>
     </section>
 
     <!-- 代币信息 -->
@@ -388,108 +393,91 @@
       <p>以下为当前版本合约配置（如有升级会在官方渠道同步公告）：</p>
 
       <div class="tokenomics-grid">
-        <div class="token-card">
-          <strong>链 & 标准</strong><br />
-          BNB Smart Chain（BEP20）
-        </div>
-        <div class="token-card">
-          <strong>总发行量</strong><br />
-          1,000,000,000 过个球年（固定总量，无增发）
-        </div>
-        <div class="token-card">
-          <strong>小数位</strong><br />
-          18
-        </div>
-        <div class="token-card">
-          <strong>合约地址</strong><br />
-          <span class="stat-contract">0x522798ddb5facf944e57400356fab78929104676</span>
-        </div>
+        <div class="token-card"><strong>链 & 标准</strong><br />BNB Smart Chain（BEP20）</div>
+        <div class="token-card"><strong>总发行量</strong><br />1,000,000,000 过个球年（固定总量，无增发）</div>
+        <div class="token-card"><strong>小数位</strong><br />18</div>
+        <div class="token-card"><strong>合约地址</strong><br /><span class="stat-contract">0x522798ddb5facf944e57400356fab78929104676</span></div>
       </div>
 
       <p style="margin-top:10px;">
         合约基于 OpenZeppelin ERC20 标准实现，当前版本<strong>未内置增发、黑名单、交易税等控制逻辑</strong>，
         主要风险来自于市场波动本身。请务必做好自己的研究（DYOR），理性参与。
-      </p >
+      </p>
     </section>
 
     <!-- 如何购买 -->
-    <ol class="howto-steps">
-  <li>1）准备钱包：使用 MetaMask / Trust Wallet 等，并确保钱包里有少量 BNB（用于购买与手续费）。</li>
-  <li>2）切换网络：把钱包网络切换到 <strong>BNB Smart Chain（BSC）</strong>。</li>
-  <li>3）打开交易页面：点击本官网的「去交易过个球年」，在 PancakeSwap 里会自动带入代币。</li>
-  <li>4）购买：输入要花的 BNB 数量 → 点击 Swap → 在钱包里确认交易。</li>
-</ol>
+    <section id="howto">
+      <h2>如何购买 · How to Buy</h2>
 
-<div style="margin-top:12px;">
-  <a class="btn btn-primary"
-     href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x522798ddb5facf944e57400356fab78929104676"
-     target="_blank" rel="noopener">
-    ⚽ 立即去 PancakeSwap 购买
-  </a>
-</div>
+      <ol class="howto-steps">
+        <li>1）准备钱包：使用 MetaMask / Trust Wallet 等，并确保钱包里有少量 BNB（用于购买与手续费）。</li>
+        <li>2）切换网络：把钱包网络切换到 <strong>BNB Smart Chain（BSC）</strong>。</li>
+        <li>3）打开交易页面：点击本官网的「去交易过个球年」，在 PancakeSwap 里会自动带入代币。</li>
+        <li>4）购买：输入要花的 BNB 数量 → 点击 Swap → 在钱包里确认交易。</li>
+      </ol>
 
-<div class="risk-box">
-  ⚠ 风险提示：加密资产价格波动极大，可能导致本金亏损。<br />
-  本项目不保证任何收益，也不对任何个人的投资行为负责。请量力而行，理性参与。
-</div>
+      <div style="margin-top:12px;">
+        <a class="btn btn-primary"
+           href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x522798ddb5facf944e57400356fab78929104676"
+           target="_blank" rel="noopener">
+          ⚽ 立即去 PancakeSwap 购买
+        </a>
+      </div>
 
+      <div class="risk-box">
+        ⚠ 风险提示：加密资产价格波动极大，可能导致本金亏损。<br />
+        本项目不保证任何收益，也不对任何个人的投资行为负责。请量力而行，理性参与。
+      </div>
     </section>
 
     <!-- 路线图 -->
     <section id="roadmap">
       <h2>路线图 · Roadmap</h2>
       <ul class="roadmap-list">
-        <li class="roadmap-item">
-          <strong>阶段一 · 启动</strong>：部署合约、创建流动性池、完成基础官网与 Logo、开通微博 / 推特 / 电报群。
-        </li>
-        <li class="roadmap-item">
-          <strong>阶段二 · 社区建设</strong>：联合社区举办红包雨、竞猜活动，让更多人了解「过个球年」这个梗。
-        </li>
-        <li class="roadmap-item">
-          <strong>阶段三 · 品牌升级</strong>：申请各大钱包展示 Logo，接入更多工具网站（行情、数据分析、图表网站等）。
-        </li>
-        <li class="roadmap-item">
-          <strong>阶段四 · 生态尝试</strong>：视社区发展情况，尝试小游戏、小工具、NFT 主题活动等周边内容。
-        </li>
+        <li class="roadmap-item"><strong>阶段一 · 启动</strong>：部署合约、创建流动性池、完成基础官网与 Logo、开通微博 / 推特 / 电报群。</li>
+        <li class="roadmap-item"><strong>阶段二 · 社区建设</strong>：联合社区举办红包雨、竞猜活动，让更多人了解「过个球年」这个梗。</li>
+        <li class="roadmap-item"><strong>阶段三 · 品牌升级</strong>：申请各大钱包展示 Logo，接入更多工具网站（行情、数据分析、图表网站等）。</li>
+        <li class="roadmap-item"><strong>阶段四 · 生态尝试</strong>：视社区发展情况，尝试小游戏、小工具、NFT 主题活动等周边内容。</li>
       </ul>
     </section>
 
     <!-- 社区与链接 -->
-<section id="community">
-  <h2>社区与链接 · Community</h2>
-  <p>所有最新进展、活动与公告，都会优先在社区发布，欢迎加入：</p>
+    <section id="community">
+      <h2>社区与链接 · Community</h2>
+      <p>所有最新进展、活动与公告，都会优先在社区发布，欢迎加入：</p>
 
-<div class="social-links">
-  <a href="https://x.com/guogeqiunian" target="_blank" rel="noopener">🐦 X（Twitter）@guogeqiunian</a>
-  <a href="https://t.me/+7AsFDAlwnIszMjZl" target="_blank" rel="noopener">📣 Telegram 群</a>
-  <a href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676" target="_blank" rel="noopener">🔎 BscScan 合约页面</a>
-</div>
+      <div class="social-links">
+        <a href="https://x.com/guogeqiunian" target="_blank" rel="noopener">🐦 X（Twitter）@guogeqiunian</a>
+        <a href="https://t.me/+7AsFDAlwnIszMjZl" target="_blank" rel="noopener">📣 Telegram 群</a>
+        <a href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676" target="_blank" rel="noopener">🔎 BscScan 合约页面</a>
+      </div>
+    </section>
 
-</section>
     <footer>
       © 2026 过个球年 · GuoGeQiuNian. 本页面仅为项目介绍，不构成任何投资建议。
     </footer>
   </div>
-  <script>
-  function copyCA() {
-    const ca = "0x522798ddb5facf944e57400356fab78929104676";
-    navigator.clipboard.writeText(ca).then(() => {
-      alert("已复制合约地址！");
-    }).catch(() => {
-      // 兼容少数浏览器
-      const ta = document.createElement("textarea");
-      ta.value = ca;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      document.body.removeChild(ta);
-      alert("已复制合约地址！");
-    });
-  }
-</script>
-</body>
 
+  <script>
+    function copyCA() {
+      const ca = "0x522798ddb5facf944e57400356fab78929104676";
+      navigator.clipboard.writeText(ca).then(() => {
+        alert("已复制合约地址！");
+      }).catch(() => {
+        const ta = document.createElement("textarea");
+        ta.value = ca;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        alert("已复制合约地址！");
+      });
+    }
+  </script>
+</body>
 </html>
+
+
 
 
 
