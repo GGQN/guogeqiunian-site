@@ -289,18 +289,19 @@
   </style>
 </head>
 <body>
+  <div id="top"></div>
   <div class="container">
     <!-- 顶部导航 -->
     <header>
-      <div class="logo-wrap">
-        <div class="logo">
-          <img src="logo.png" alt="过个球年">
-        </div>
-        <div>
-          <div style="font-weight: 700;">过个球年</div>
-          <div style="font-size:12px;color:var(--text-soft);">GuoGeQiuNian · BNB Smart Chain</div>
-        </div>
-      </div>
+     <a class="logo-wrap" href="#top" style="text-decoration:none;">
+  <div class="logo">
+    <img src="logo.png" alt="过个球年">
+  </div>
+  <div>
+    <div style="font-weight: 700; color: var(--text);">过个球年</div>
+    <div style="font-size:12px;color:var(--text-soft);">GuoGeQiuNian · BNB Smart Chain</div>
+  </div>
+</a>
       <nav>
         <a href="#about">项目介绍</a>
         <a href="#tokenomics">代币信息</a>
@@ -334,6 +335,9 @@
    target="_blank" rel="noopener">
   ⚽ 去交易过个球年
 </a>
+          <div style="margin-top:10px;font-size:12px;color:var(--text-soft);">
+  提示：先连接钱包并切换到 BNB Smart Chain；若交易失败可把滑点调到 1%～5% 再试。
+</div>
           <a class="btn btn-outline" href="#tokenomics">
             📄 查看合约 & 详情
           </a>
@@ -408,21 +412,26 @@
     </section>
 
     <!-- 如何购买 -->
-    <section id="howto">
-      <h2>如何购买 · How to Buy</h2>
-      <ol class="howto-steps">
-        <li>1）安装并打开支持 BNB Smart Chain 的钱包，例如 MetaMask、Trust Wallet 等。</li>
-        <li>2）将网络切换为 <strong>BNB Smart Chain（BSC）</strong>。</li>
-        <li>3）在钱包中点击「添加代币」，粘贴合约地址：
-          <code>0x522798ddb5facf944e57400356fab78929104676</code>，确认名称「过个球年」。</li>
-        <li>4）前往去中心化交易所（例如 PancakeSwap），选择 BNB ↔ 过个球年，设置好滑点后进行交换。</li>
-        <li>5）交易完成后，在钱包资产列表中即可看到你的 过个球年 代币。</li>
-      </ol>
+    <ol class="howto-steps">
+  <li>1）准备钱包：使用 MetaMask / Trust Wallet 等，并确保钱包里有少量 BNB（用于购买与手续费）。</li>
+  <li>2）切换网络：把钱包网络切换到 <strong>BNB Smart Chain（BSC）</strong>。</li>
+  <li>3）打开交易页面：点击本官网的「去交易过个球年」，在 PancakeSwap 里会自动带入代币。</li>
+  <li>4）购买：输入要花的 BNB 数量 → 点击 Swap → 在钱包里确认交易。</li>
+</ol>
 
-      <div class="risk-box">
-        ⚠ 风险提示：加密资产价格波动极大，可能导致本金亏损。  
-        本项目不保证任何收益，也不对任何个人的投资行为负责。请量力而行，理性参与。
-      </div>
+<div style="margin-top:12px;">
+  <a class="btn btn-primary"
+     href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x522798ddb5facf944e57400356fab78929104676"
+     target="_blank" rel="noopener">
+    ⚽ 立即去 PancakeSwap 购买
+  </a>
+</div>
+
+<div class="risk-box">
+  ⚠ 风险提示：加密资产价格波动极大，可能导致本金亏损。<br />
+  本项目不保证任何收益，也不对任何个人的投资行为负责。请量力而行，理性参与。
+</div>
+
     </section>
 
     <!-- 路线图 -->
@@ -461,5 +470,6 @@
 </body>
 
 </html>
+
 
 
