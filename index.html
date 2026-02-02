@@ -302,13 +302,13 @@
     <div style="font-size:12px;color:var(--text-soft);">GuoGeQiuNian · BNB Smart Chain</div>
   </div>
 </a>
-      <nav>
-        <a href="#about">项目介绍</a>
-        <a href="#tokenomics">代币信息</a>
-        <a href="#howto">如何购买</a>
-        <a href="#roadmap">路线图</a>
-        <a href="#community">社区</a>
-      </nav>
+<nav>
+  <a href="#about">项目介绍</a>
+  <a href="#tokenomics">代币信息</a>
+  <a href="#howto">如何购买</a>
+  <a href="#roadmap">路线图</a>
+  <a href="#community">社区</a>
+</nav>
     </header>
 
     <!-- Hero 区域 -->
@@ -349,8 +349,10 @@
         <h3>合约关键信息</h3>
         <div class="stat-row">
           <span class="stat-label">合约地址</span>
-          <span class="stat-value stat-contract">0x522798ddb5facf944e57400356fab78929104676</span>
-        </div>
+         <div style="display:flex; align-items:center; gap:10px; justify-content:flex-end;">
+  <span class="stat-value stat-contract" id="contractAddress">0x522798ddb5facf944e57400356fab78929104676</span>
+  <button class="btn btn-outline" style="padding:6px 10px;font-size:12px;" onclick="copyCA()">📋 复制</button>
+</div>
         <div class="stat-row">
           <span class="stat-label">链 & 标准</span>
           <span class="stat-value">BNB Smart Chain · BEP20</span>
@@ -454,22 +456,41 @@
     </section>
 
     <!-- 社区与链接 -->
-    <section id="community">
-      <h2>社区与链接 · Community</h2>
-      <p>所有最新进展、活动与公告，都会优先在社区发布，欢迎加入：</p >
-     <div class="social-links">
+<section id="community">
+  <h2>社区与链接 · Community</h2>
+  <p>所有最新进展、活动与公告，都会优先在社区发布，欢迎加入：</p>
+
+<div class="social-links">
   <a href="https://x.com/guogeqiunian" target="_blank" rel="noopener">🐦 X（Twitter）@guogeqiunian</a>
   <a href="https://t.me/+7AsFDAlwnIszMjZl" target="_blank" rel="noopener">📣 Telegram 群</a>
+  <a href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676" target="_blank" rel="noopener">🔎 BscScan 合约页面</a>
 </div>
-    </section>
-
+</section>
     <footer>
       © 2026 过个球年 · GuoGeQiuNian. 本页面仅为项目介绍，不构成任何投资建议。
     </footer>
   </div>
+  <script>
+  function copyCA() {
+    const ca = "0x522798ddb5facf944e57400356fab78929104676";
+    navigator.clipboard.writeText(ca).then(() => {
+      alert("已复制合约地址！");
+    }).catch(() => {
+      // 兼容少数浏览器
+      const ta = document.createElement("textarea");
+      ta.value = ca;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      alert("已复制合约地址！");
+    });
+  }
+</script>
 </body>
 
 </html>
+
 
 
 
