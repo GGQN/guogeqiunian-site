@@ -2,77 +2,78 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>过个球年 · 官方网站</title>
-  <meta name="description" content="过个球年（GGQN）——BNB Smart Chain 上的中文节日 & 世界杯主题 Meme 代币。总量 10 亿，固定总量，无增发。">
+  <meta name="description" content="过个球年（GuoGeQiuNian / GGQN），BNB Smart Chain（BEP20）中文 Meme 代币，总量 10 亿，固定总量，无增发。" />
 
-  <!-- OpenGraph / X -->
+  <!-- OpenGraph / Twitter -->
   <meta property="og:title" content="过个球年 · 官方网站" />
-  <meta property="og:description" content="BNB Smart Chain 节日 & 世界杯主题 Meme 代币，总量 10 亿，固定总量，无增发。" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png?v=9" />
-  <meta property="og:url" content="https://ggqn.github.io/guogeqiunian-site/" />
+  <meta property="og:description" content="BNB Smart Chain（BEP20）中文 Meme 代币，总量 10 亿，固定总量，无增发。" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ggqn.github.io/guogeqiunian-site/" />
+  <meta property="og:image" content="https://ggqn.github.io/guogeqiunian-site/logo.png?v=20260206" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- favicon（不要用本地 logo.png，避免缓存错图） -->
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png?v=9" />
+  <!-- Favicon（一定要和仓库文件名一致：logo.png） -->
+  <link rel="icon" type="image/png" href="logo.png?v=20260206" />
 
   <style>
     :root{
-      --bg0:#05070b;
-      --bg1:#050b1a;
-      --card: rgba(17,24,39,.70);
-      --card2: rgba(15,23,42,.72);
-      --border: rgba(148,163,184,.16);
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-      --accent:#22c55e;
+      --bg1:#050a12;
+      --bg2:#020617;
+      --card:rgba(10, 20, 35, .66);
+      --card2:rgba(10, 18, 30, .72);
+      --border:rgba(255,255,255,.10);
+      --text:#eaf0ff;
+      --muted:rgba(234,240,255,.70);
+      --muted2:rgba(234,240,255,.55);
+      --accent:#19f59a;
       --accent2:#06b6d4;
-      --shadow: 0 18px 60px rgba(0,0,0,.55);
-      --r: 18px;
+      --shadow:0 18px 50px rgba(0,0,0,.55);
+      --radius:18px;
+      --radius2:14px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Microsoft YaHei", system-ui, sans-serif;
+      font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       color:var(--text);
       background:
-        radial-gradient(1200px 600px at 20% 0%, rgba(34,197,94,.18), transparent 55%),
-        radial-gradient(900px 500px at 70% 10%, rgba(6,182,212,.16), transparent 55%),
-        radial-gradient(900px 600px at 50% 80%, rgba(99,102,241,.10), transparent 60%),
-        linear-gradient(180deg, #020617, #000 65%);
+        radial-gradient(1200px 700px at 20% 10%, rgba(25,245,154,.18), transparent 60%),
+        radial-gradient(900px 600px at 85% 25%, rgba(6,182,212,.16), transparent 62%),
+        radial-gradient(1000px 900px at 40% 110%, rgba(99,102,241,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
       overflow-x:hidden;
     }
-    a{color:inherit;text-decoration:none}
-    a:hover{opacity:.92;text-decoration:underline}
-
-    /* ===== Layout ===== */
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
     .wrap{
-      max-width:1200px;
+      max-width:1180px;
       margin:0 auto;
-      padding: 24px 18px 70px;
+      padding:22px 16px 56px;
     }
+
+    /* 顶栏 */
     .topbar{
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:14px;
-      padding: 6px 0 18px;
+      margin-bottom:18px;
     }
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
-      min-width: 240px;
+      min-width:260px;
     }
     .brand .logo{
       width:44px;height:44px;border-radius:50%;
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.18);
-      box-shadow: 0 0 0 6px rgba(34,197,94,.08);
-      display:grid;place-items:center;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
       overflow:hidden;
+      box-shadow:0 0 20px rgba(255,255,255,.12);
       flex:0 0 auto;
     }
     .brand .logo img{
@@ -80,245 +81,274 @@
       object-fit:cover;
       display:block;
     }
-    .brand .t1{font-weight:800;font-size:18px;letter-spacing:.3px}
+    .brand .t1{font-weight:800;font-size:18px;line-height:1.1}
     .brand .t2{font-size:12px;color:var(--muted);margin-top:2px}
 
     .nav{
       display:flex;
-      gap:14px;
       flex-wrap:wrap;
+      gap:14px;
       justify-content:flex-end;
-      font-size:14px;
-      color: var(--muted);
     }
     .nav a{
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid transparent;
+      color:var(--muted);
+      font-size:13px;
+      padding:6px 0;
+      border-bottom:1px solid transparent;
     }
-    .nav a:hover{
-      border-color: var(--border);
-      background: rgba(255,255,255,.04);
-      text-decoration:none;
-      color: var(--text);
+    .nav a:hover{color:var(--accent);border-color:rgba(25,245,154,.55);text-decoration:none}
+
+    /* 主体两栏：宽屏两栏，窄屏自动一栏 */
+    .grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      align-items:start;
     }
 
-    /* hero grid */
-    .hero{
-      display:grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
-      gap: 22px;
-      align-items:start;
-      margin-top: 10px;
-    }
-    .panel{
-      background: var(--card);
+    /* 卡片通用 */
+    .card{
+      background:var(--card);
       border:1px solid var(--border);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      padding: 22px;
-      backdrop-filter: blur(8px);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
-    .panel.soft{
-      background: var(--card2);
+    .pad{padding:18px}
+
+    /* 左侧 Hero */
+    .hero h1{
+      margin:0 0 10px;
+      font-size:40px;
+      line-height:1.15;
+      letter-spacing:.2px;
     }
-    .h1{
-      font-size: clamp(28px, 3.2vw, 44px);
-      line-height:1.08;
-      font-weight: 900;
-      margin: 0 0 10px;
-      letter-spacing: .2px;
-    }
-    .lead{
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.7;
-      max-width: 58ch;
+    .hero p{
+      margin:0 0 14px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.75;
     }
     .badges{
       display:flex;
-      gap:10px;
       flex-wrap:wrap;
-      margin: 14px 0 18px;
+      gap:10px;
+      margin:10px 0 14px;
     }
     .badge{
       display:inline-flex;
       align-items:center;
       gap:8px;
-      font-size: 12px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
-      color: #cbd5e1;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.18);
+      color:rgba(234,240,255,.82);
+      font-size:12px;
+      white-space:nowrap;
     }
     .dot{
       width:9px;height:9px;border-radius:50%;
-      background: var(--accent);
-      box-shadow: 0 0 10px rgba(34,197,94,.55);
+      background:var(--accent);
+      box-shadow:0 0 10px rgba(25,245,154,.8);
     }
 
     .actions{
       display:flex;
-      gap:12px;
       flex-wrap:wrap;
+      gap:10px;
       align-items:center;
-      margin-top: 8px;
+      margin-top:6px;
     }
     .btn{
       display:inline-flex;
       align-items:center;
       gap:10px;
-      padding: 11px 16px;
-      border-radius: 999px;
+      border-radius:999px;
+      padding:10px 16px;
+      font-size:14px;
       border:1px solid transparent;
-      font-size: 14px;
       cursor:pointer;
       user-select:none;
       white-space:nowrap;
-      transition: transform .15s ease, opacity .15s ease;
+      text-decoration:none;
     }
-    .btn:hover{transform: translateY(-1px); opacity:.96; text-decoration:none}
     .btn.primary{
-      color:#02110a;
-      font-weight:800;
-      background: linear-gradient(135deg, var(--accent2), var(--accent));
-      box-shadow: 0 16px 36px rgba(34,197,94,.24);
+      color:#041118;
+      background:linear-gradient(135deg, var(--accent2), var(--accent));
+      box-shadow:0 14px 30px rgba(25,245,154,.22);
+      font-weight:700;
     }
+    .btn.primary:hover{transform:translateY(-1px);text-decoration:none}
     .btn.ghost{
-      color: var(--text);
-      border-color: var(--border);
-      background: rgba(255,255,255,.03);
+      background:rgba(0,0,0,.20);
+      border-color:rgba(255,255,255,.12);
+      color:var(--muted);
     }
-    .hint{
-      margin-top: 10px;
-      font-size: 12px;
-      color: var(--muted);
+    .btn.ghost:hover{border-color:rgba(25,245,154,.55);color:var(--accent);text-decoration:none}
+
+    .tip{
+      margin-top:10px;
+      font-size:12px;
+      color:var(--muted2);
     }
 
-    /* right side list */
-    .cardTitle{
+    /* 右侧信息卡 */
+    .right .title{
+      font-weight:800;
       margin:0 0 12px;
-      font-size: 15px;
-      font-weight: 900;
-      letter-spacing: .2px;
+      font-size:16px;
     }
-    .kv{
+    .rows{
       display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap: 12px;
-      padding: 10px 0;
-      border-top: 1px dashed rgba(148,163,184,.22);
-    }
-    .kv:first-of-type{border-top:none;padding-top:0}
-    .k{font-size:12px;color: var(--muted)}
-    .v{font-size:12px;color: var(--text); text-align:right; word-break:break-all}
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
-    .copy{
-      margin-left:10px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      color: var(--text);
-      font-size: 12px;
-      cursor:pointer;
-    }
-
-    /* verification box */
-    .verify{
-      margin-top: 14px;
-      padding: 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(34,197,94,.28);
-      background: linear-gradient(180deg, rgba(34,197,94,.10), rgba(6,182,212,.06));
-    }
-    .verifyHead{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:12px;
-      margin-bottom: 10px;
-    }
-    .verifyHead .t{
-      font-weight: 900;
-      font-size: 13px;
-    }
-    .verifyHead .s{
-      font-size: 12px;
-      color: var(--muted);
-      text-align:right;
+      flex-direction:column;
+      gap:10px;
     }
     .row{
       display:flex;
       justify-content:space-between;
-      gap: 12px;
-      padding: 9px 0;
-      border-top: 1px solid rgba(148,163,184,.18);
+      gap:14px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(0,0,0,.16);
     }
-    .row:first-of-type{border-top:none}
-    .row .lk{font-size:12px;color: var(--muted)}
-    .row a{font-size:12px;color: #86efac; word-break:break-all}
+    .row .k{color:var(--muted);font-size:12px}
+    .row .v{
+      font-size:12px;
+      color:rgba(234,240,255,.88);
+      text-align:right;
+      max-width:66%;
+      word-break:break-all;
+    }
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+    .copybtn{
+      margin-left:10px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.18);
+      color:rgba(234,240,255,.85);
+      font-size:12px;
+      cursor:pointer;
+    }
+    .copybtn:hover{border-color:rgba(25,245,154,.55);color:var(--accent)}
+    .row.inline{
+      align-items:center;
+    }
 
-    /* sections */
+    /* 官方验证信息块 */
+    .verify{
+      margin-top:14px;
+      border-radius:var(--radius2);
+      border:1px solid rgba(25,245,154,.30);
+      background:linear-gradient(180deg, rgba(25,245,154,.08), rgba(0,0,0,.12));
+      padding:12px;
+    }
+    .verifyHead{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+      margin-bottom:10px;
+    }
+    .verifyHead .h{
+      font-weight:900;
+      font-size:13px;
+    }
+    .verifyHead .s{
+      font-size:12px;color:var(--muted2);
+      text-align:right;
+    }
+    .verifyList{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .vitem{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      padding:9px 10px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(0,0,0,.16);
+    }
+    .vitem .k{font-size:12px;color:var(--muted)}
+    .vitem .v{
+      font-size:12px;
+      color:rgba(25,245,154,.92);
+      text-align:right;
+      max-width:70%;
+      word-break:break-all;
+    }
+
+    /* 下方模块 */
     .sections{
-      margin-top: 22px;
+      margin-top:18px;
       display:grid;
-      gap: 16px;
+      grid-template-columns: 1fr;
+      gap:14px;
     }
     .sec h2{
-      margin: 0 0 8px;
-      font-size: 18px;
-      font-weight: 900;
+      margin:0 0 8px;
+      font-size:16px;
+      font-weight:900;
     }
     .sec p, .sec li{
-      margin: 0 0 8px;
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.75;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.85;
     }
-    .sec ul, .sec ol{margin: 0; padding-left: 18px}
-    .warn{
-      margin-top: 10px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px dashed rgba(248,113,113,.55);
-      background: rgba(127,29,29,.20);
-      color: #fecaca;
-      font-size: 13px;
-    }
-    footer{
-      margin-top: 26px;
-      text-align:center;
-      color: rgba(148,163,184,.75);
-      font-size: 12px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
+    .sec ul{margin:0;padding-left:18px}
+    .sec ol{margin:0;padding-left:18px}
+    .risk{
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px dashed rgba(248,113,113,.55);
+      background:rgba(127,29,29,.18);
+      color:rgba(254,202,202,.95);
+      font-size:12px;
+      line-height:1.6;
     }
 
-    /* responsive */
+    footer{
+      margin-top:18px;
+      text-align:center;
+      font-size:12px;
+      color:var(--muted2);
+      padding-top:10px;
+    }
+
+    /* 响应式：小屏一列 */
     @media (max-width: 980px){
-      .hero{grid-template-columns: 1fr}
-      .nav{justify-content:flex-start}
-      .brand{min-width:unset}
+      .grid{grid-template-columns:1fr}
+      .brand{min-width:auto}
+      .hero h1{font-size:34px}
+    }
+    @media (max-width: 520px){
+      .hero h1{font-size:30px}
+      .nav{gap:10px}
     }
   </style>
 </head>
 
 <body>
   <div class="wrap" id="top">
+
     <div class="topbar">
-      <a class="brand" href="#top">
+      <div class="brand">
         <div class="logo">
-          <img src="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png?v=9" alt="过个球年 Logo">
+          <!-- 站内logo：用仓库根目录 logo.png（加版本号避免缓存） -->
+          <img src="logo.png?v=20260206" alt="过个球年" />
         </div>
         <div>
           <div class="t1">过个球年</div>
           <div class="t2">GuoGeQiuNian · BNB Smart Chain · GGQN</div>
         </div>
-      </a>
+      </div>
 
       <div class="nav">
         <a href="#about">项目介绍</a>
@@ -330,13 +360,13 @@
       </div>
     </div>
 
-    <div class="hero">
-      <!-- LEFT -->
-      <div class="panel">
-        <h1 class="h1">用一颗球，跨过这一年。</h1>
-        <p class="lead">
+    <div class="grid">
+      <!-- 左侧 -->
+      <div class="card pad hero">
+        <h1>用一颗球，跨过这一年。</h1>
+        <p>
           「过个球年」是部署在 BNB Smart Chain 上的节日 & 世界杯主题 Meme 代币，总量 10 亿，
-          固定总量、无增发、无预留，社区自发建设，一起踢走霉运，迎接新一年的好运气。
+          固定总量、无增发。社区自发建设，一起踢走霉运，迎接新一年的好运气。
         </p>
 
         <div class="badges">
@@ -354,129 +384,138 @@
           <a class="btn ghost" href="#verify">✅ 官方验证信息</a>
         </div>
 
-        <div class="hint">
+        <div class="tip">
           提示：先连接钱包并切换到 BNB Smart Chain；若交易失败可把滑点调到 1%～5% 再试。
         </div>
 
         <div class="sections">
-          <div class="panel soft sec" id="about">
+          <div class="card pad sec" id="about" style="background:var(--card2);border-radius:var(--radius);border:1px solid var(--border);box-shadow:none;">
             <h2>项目介绍</h2>
-            <p>「过个球年」是 BNBChain 上的中文 Meme 代币，源自网络热梗“过个球年”，象征对现实无奈但不妥协的互联网精神。</p>
-            <p>在 2026 年春节与世界杯氛围交汇之际，用“球”把情绪踢出去，用“年”把好运迎进来。</p>
+            <p>「过个球年」是 BNBChain 上的中文 Meme 代币，源自网络热梗“过个球年”，象征面对现实无奈但仍保持幽默与韧性的互联网精神。</p>
+            <p>在 2026 年春节与世界杯热度交汇的时间点，用“球”把烦恼踢走，用“年”把好运迎回来。</p>
           </div>
 
-          <div class="panel soft sec" id="token">
+          <div class="card pad sec" id="token" style="background:var(--card2);border-radius:var(--radius);border:1px solid var(--border);box-shadow:none;">
             <h2>代币信息</h2>
-            <p><strong>名称：</strong>过个球年</p>
-            <p><strong>代号：</strong>GGQN</p>
-            <p><strong>网络：</strong>BNB Smart Chain（BEP20）</p>
-            <p><strong>合约：</strong><span class="mono">0x522798ddb5facf944e57400356fab78929104676</span></p>
-            <p><strong>总量：</strong>1,000,000,000（固定总量，无增发）</p>
-            <p><strong>小数位：</strong>18</p>
+            <ul>
+              <li>名称：过个球年</li>
+              <li>代号：GGQN</li>
+              <li>网络：BNB Smart Chain（BEP20）</li>
+              <li>合约：<span class="mono">0x522798ddb5facf944e57400356fab78929104676</span></li>
+              <li>总量：1,000,000,000（固定总量，无增发）</li>
+              <li>小数位：18</li>
+            </ul>
           </div>
 
-          <div class="panel soft sec" id="buy">
+          <div class="card pad sec" id="buy" style="background:var(--card2);border-radius:var(--radius);border:1px solid var(--border);box-shadow:none;">
             <h2>如何购买</h2>
             <ol>
               <li>准备钱包：MetaMask / Trust Wallet，并准备少量 BNB（手续费+交易）。</li>
               <li>切换网络：BNB Smart Chain（BSC）。</li>
-              <li>打开交易：点击本页“去交易过个球年”，会自动带入合约。</li>
+              <li>打开交易：点击“去交易过个球年”，会自动带入合约。</li>
               <li>输入 BNB → Swap → 钱包确认。</li>
             </ol>
-            <div class="warn">⚠ 风险提示：加密资产波动极大，可能导致本金亏损。本项目不承诺任何收益，请自行研究并量力参与。</div>
+            <div class="risk">⚠ 风险提示：加密资产波动极大，可能导致本金亏损。本项目不承诺任何回报，理性参与，DYOR。</div>
           </div>
 
-          <div class="panel soft sec" id="roadmap">
+          <div class="card pad sec" id="roadmap" style="background:var(--card2);border-radius:var(--radius);border:1px solid var(--border);box-shadow:none;">
             <h2>路线图</h2>
             <ul>
-              <li><b>阶段一 · 启动</b>：部署合约、官网与 Logo、开通官方渠道。</li>
-              <li><b>阶段二 · 社区</b>：活动/竞猜/内容共创，扩大传播。</li>
-              <li><b>阶段三 · 展示</b>：申请钱包 Logo、完善数据入口与资料。</li>
-              <li><b>阶段四 · 生态</b>：小游戏/小工具/NFT 等周边尝试（视社区发展）。</li>
+              <li>阶段一：部署合约、官网与 Logo、开通官方渠道。</li>
+              <li>阶段二：社区活动与内容共创，扩大传播。</li>
+              <li>阶段三：申请钱包展示 Logo，完善数据入口。</li>
+              <li>阶段四：视社区发展，尝试小游戏/工具/NFT 周边。</li>
             </ul>
           </div>
 
-          <div class="panel soft sec" id="community">
+          <div class="card pad sec" id="community" style="background:var(--card2);border-radius:var(--radius);border:1px solid var(--border);box-shadow:none;">
             <h2>社区</h2>
-            <p>最新进展与公告优先在社区发布，欢迎加入：</p>
-            <p>
-              🐦 X：<a target="_blank" rel="noopener" href="https://x.com/guogeqiunian">https://x.com/guogeqiunian</a><br/>
-              📣 Telegram：<a target="_blank" rel="noopener" href="https://t.me/guogeqiunian">https://t.me/guogeqiunian</a><br/>
-              🔎 BscScan：<a target="_blank" rel="noopener" href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676">合约页面</a><br/>
-              📧 Email：<a href="mailto:ggqingn@gmail.com">ggqingn@gmail.com</a>
-            </p>
+            <ul>
+              <li>X：<a target="_blank" rel="noopener" href="https://x.com/guogeqiunian">https://x.com/guogeqiunian</a></li>
+              <li>Telegram：<a target="_blank" rel="noopener" href="https://t.me/guogeqiunian">https://t.me/guogeqiunian</a></li>
+              <li>BscScan：<a target="_blank" rel="noopener" href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676">合约页面</a></li>
+              <li>Email：<a href="mailto:ggqingn@gmail.com">ggqingn@gmail.com</a></li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT -->
-      <div class="panel" id="verify">
-        <h3 class="cardTitle">合约关键信息</h3>
+      <!-- 右侧 -->
+      <div class="card pad right">
+        <div class="title">合约关键信息</div>
 
-        <div class="kv">
-          <div class="k">合约地址</div>
-          <div class="v">
-            <span class="mono" id="ca">0x522798ddb5facf944e57400356fab78929104676</span>
-            <button class="copy" onclick="copyCA()">复制</button>
+        <div class="rows">
+          <div class="row inline">
+            <div class="k">合约地址</div>
+            <div class="v mono" id="ca">0x522798ddb5facf944e57400356fab78929104676</div>
+            <button class="copybtn" onclick="copyText(document.getElementById('ca').innerText)">复制</button>
+          </div>
+
+          <div class="row">
+            <div class="k">链 & 标准</div>
+            <div class="v">BNB Smart Chain · BEP20</div>
+          </div>
+
+          <div class="row">
+            <div class="k">代币名称 / 代号</div>
+            <div class="v">过个球年 / GGQN</div>
+          </div>
+
+          <div class="row">
+            <div class="k">总发行量</div>
+            <div class="v">1,000,000,000</div>
+          </div>
+
+          <div class="row">
+            <div class="k">小数位</div>
+            <div class="v">18</div>
+          </div>
+
+          <div class="row">
+            <div class="k">合约模板</div>
+            <div class="v">OpenZeppelin ERC20</div>
           </div>
         </div>
-        <div class="kv">
-          <div class="k">链 & 标准</div>
-          <div class="v">BNB Smart Chain · BEP20</div>
-        </div>
-        <div class="kv">
-          <div class="k">代币名称 / 代号</div>
-          <div class="v">过个球年 / GGQN</div>
-        </div>
-        <div class="kv">
-          <div class="k">总发行量</div>
-          <div class="v">1,000,000,000</div>
-        </div>
-        <div class="kv">
-          <div class="k">小数位</div>
-          <div class="v">18</div>
-        </div>
-        <div class="kv">
-          <div class="k">合约模板</div>
-          <div class="v">OpenZeppelin ERC20</div>
-        </div>
 
-        <div class="verify">
+        <div class="verify" id="verify">
           <div class="verifyHead">
-            <div>
-              <div class="t">官方验证信息（For Verification）</div>
-              <div class="s">用于 BscScan / 钱包审核校验</div>
-            </div>
-            <div class="s">请保持所有链接可访问</div>
+            <div class="h">官方验证信息（For Verification）</div>
+            <div class="s">用于 BscScan / 钱包审核校验<br>请保持所有链接可访问</div>
           </div>
 
-          <div class="row">
-            <div class="lk">Website</div>
-            <a target="_blank" rel="noopener" href="https://ggqn.github.io/guogeqiunian-site/">https://ggqn.github.io/guogeqiunian-site/</a>
+          <div class="verifyList">
+            <div class="vitem">
+              <div class="k">Website</div>
+              <div class="v"><a target="_blank" rel="noopener" href="https://ggqn.github.io/guogeqiunian-site/">https://ggqn.github.io/guogeqiunian-site/</a></div>
+            </div>
+            <div class="vitem">
+              <div class="k">Official Email</div>
+              <div class="v"><a href="mailto:ggqingn@gmail.com">ggqingn@gmail.com</a></div>
+            </div>
+            <div class="vitem">
+              <div class="k">Telegram</div>
+              <div class="v"><a target="_blank" rel="noopener" href="https://t.me/guogeqiunian">https://t.me/guogeqiunian</a></div>
+            </div>
+            <div class="vitem">
+              <div class="k">X (Twitter)</div>
+              <div class="v"><a target="_blank" rel="noopener" href="https://x.com/guogeqiunian">https://x.com/guogeqiunian</a></div>
+            </div>
+            <div class="vitem">
+              <div class="k">GitHub</div>
+              <div class="v"><a target="_blank" rel="noopener" href="https://github.com/GGQN/guogeqiunian-site">https://github.com/GGQN/guogeqiunian-site</a></div>
+            </div>
+            <div class="vitem">
+              <div class="k">Logo (32×32)</div>
+              <div class="v"><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png">https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png</a></div>
+            </div>
+            <div class="vitem">
+              <div class="k">BscScan</div>
+              <div class="v"><a target="_blank" rel="noopener" href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676">https://bscscan.com/token/0x5227...4676</a></div>
+            </div>
           </div>
-          <div class="row">
-            <div class="lk">Official Email</div>
-            <a href="mailto:ggqingn@gmail.com">ggqingn@gmail.com</a>
-          </div>
-          <div class="row">
-            <div class="lk">Telegram</div>
-            <a target="_blank" rel="noopener" href="https://t.me/guogeqiunian">https://t.me/guogeqiunian</a>
-          </div>
-          <div class="row">
-            <div class="lk">X (Twitter)</div>
-            <a target="_blank" rel="noopener" href="https://x.com/guogeqiunian">https://x.com/guogeqiunian</a>
-          </div>
-          <div class="row">
-            <div class="lk">GitHub</div>
-            <a target="_blank" rel="noopener" href="https://github.com/GGQN/ggqn-assets">https://github.com/GGQN/ggqn-assets</a>
-          </div>
-          <div class="row">
-            <div class="lk">Logo (32×32)</div>
-            <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png">https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png</a>
-          </div>
-          <div class="row">
-            <div class="lk">Contract</div>
-            <a target="_blank" rel="noopener" href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676">0x522798…04676</a>
+
+          <div style="margin-top:10px;display:flex;justify-content:flex-end;">
+            <button class="copybtn" onclick="copyText('Website: https://ggqn.github.io/guogeqiunian-site/\\nEmail: ggqingn@gmail.com\\nTelegram: https://t.me/guogeqiunian\\nX: https://x.com/guogeqiunian\\nGitHub: https://github.com/GGQN/guogeqiunian-site\\nLogo32: https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png\\nContract: 0x522798ddb5facf944e57400356fab78929104676')">一键复制验证信息</button>
           </div>
         </div>
 
@@ -488,21 +527,15 @@
   </div>
 
   <script>
-    function copyCA(){
-      const ca = "0x522798ddb5facf944e57400356fab78929104676";
-      if (navigator.clipboard && window.isSecureContext){
-        navigator.clipboard.writeText(ca).then(()=>alert("已复制合约地址！"));
-      } else {
-        const ta = document.createElement("textarea");
-        ta.value = ca;
-        ta.style.position = "fixed";
-        ta.style.top = "-9999px";
-        document.body.appendChild(ta);
-        ta.focus(); ta.select();
-        document.execCommand("copy");
-        ta.remove();
-        alert("已复制合约地址！");
-      }
+    function copyText(t){
+      if(!t) return;
+      navigator.clipboard.writeText(t).then(()=>alert("已复制")).catch(()=>{
+        const ta=document.createElement("textarea");
+        ta.value=t; document.body.appendChild(ta);
+        ta.select(); document.execCommand("copy");
+        document.body.removeChild(ta);
+        alert("已复制");
+      });
     }
   </script>
 </body>
