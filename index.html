@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <title>过个球年 · 官方网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="过个球年，是部署在 BNB Smart Chain 上的节日 & 世界杯主题 Meme 代币，总量 10 亿，无增发。">
+  <meta name="description" content="过个球年（GuoGeQiuNian / GGQN）是部署在 BNB Smart Chain 上的节日 & 世界杯主题 Meme 代币，总量 10 亿，无增发。">
 
-  <!-- 分享预览（朋友圈/推特） -->
+  <!-- 分享预览（微信/推特） -->
   <meta property="og:title" content="过个球年 · 官方网站" />
   <meta property="og:description" content="BNB Smart Chain 节日 & 世界杯主题 Meme 代币，总量 10 亿，无增发。" />
-  <meta property="og:image" content="https://ggqn.github.io/guogeqiunian-site/logo.png" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" />
   <meta property="og:url" content="https://ggqn.github.io/guogeqiunian-site/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- 标签页小图标 -->
-  <link rel="icon" type="image/png" href="logo.png" />
+  <!-- 标签页小图标（用可直接访问的 Raw） -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" />
 
   <style>
     :root {
@@ -27,6 +27,7 @@
       --text-soft: #9ca3af;
       --border: #1f2937;
       --danger: #f97373;
+      --shadow: rgba(15, 23, 42, 0.75);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -102,7 +103,7 @@
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
       gap: 32px;
-      align-items: center;
+      align-items: start;
       margin-bottom: 40px;
     }
     .hero-title {
@@ -164,7 +165,7 @@
     .btn-primary {
       background: linear-gradient(135deg, #06b6d4, #22c55e);
       color: #020617;
-      font-weight: 600;
+      font-weight: 700;
       box-shadow: 0 12px 30px rgba(34,197,94,0.45);
     }
     .btn-primary:hover {
@@ -182,19 +183,22 @@
       color: var(--accent);
       text-decoration: none;
     }
+    .small-btn { padding: 6px 10px; font-size: 12px; }
 
-    .hero-card {
+    .card {
       background: radial-gradient(circle at top, #111827, #020617);
       border-radius: 18px;
       padding: 20px 18px;
       border: 1px solid var(--border);
-      box-shadow: 0 18px 45px rgba(15,23,42,0.9);
+      box-shadow: 0 18px 45px var(--shadow);
       font-size: 13px;
+      overflow: hidden; /* 防止内容撑爆 */
     }
-    .hero-card h3 {
+    .card h3 {
       font-size: 15px;
       margin-bottom: 10px;
     }
+
     .stat-row {
       display: flex;
       justify-content: space-between;
@@ -202,14 +206,26 @@
       border-bottom: 1px dashed rgba(55,65,81,0.7);
       gap: 10px;
       align-items: center;
+      min-width: 0;
     }
     .stat-row:last-child { border-bottom: none; }
     .stat-label { color: var(--text-soft); }
-    .stat-value { font-weight: 500; display:flex; align-items:center; gap:10px; justify-content:flex-end; }
-    .stat-contract {
+    .stat-value {
+      font-weight: 500;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      justify-content:flex-end;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .mono {
       font-family: "SF Mono", Menlo, Consolas, monospace;
       font-size: 11px;
       word-break: break-all;
+      overflow-wrap: anywhere;
+      min-width: 0;
     }
 
     section {
@@ -239,6 +255,15 @@
     }
     .token-card strong { font-size: 13px; }
 
+    .howto-steps {
+      list-style: none;
+      font-size: 14px;
+      color: var(--text-soft);
+      margin-top: 4px;
+      padding-left: 0;
+    }
+    .howto-steps li { margin-bottom: 6px; }
+
     .roadmap-list {
       list-style: none;
       margin-top: 6px;
@@ -262,15 +287,6 @@
       border: 1px solid var(--accent);
     }
 
-    .howto-steps {
-      list-style: none;
-      font-size: 14px;
-      color: var(--text-soft);
-      margin-top: 4px;
-      padding-left: 0;
-    }
-    .howto-steps li { margin-bottom: 6px; }
-
     .risk-box {
       margin-top: 10px;
       padding: 10px 12px;
@@ -287,6 +303,55 @@
       gap: 10px;
       font-size: 14px;
       margin-top: 8px;
+    }
+
+    /* 官方验证信息卡片 */
+    .verify-box {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(0,226,135,0.35);
+      background: rgba(0,226,135,0.08);
+    }
+    .verify-title {
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .verify-title h4 {
+      font-size: 14px;
+      margin: 0;
+    }
+    .verify-hint {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+    .verify-list {
+      display: grid;
+      grid-template-columns: minmax(0,1fr);
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .verify-item {
+      display:flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      background: rgba(15,23,42,0.85);
+      border: 1px solid var(--border);
+      align-items: center;
+      min-width: 0;
+    }
+    .verify-item .k { color: var(--text-soft); white-space: nowrap; }
+    .verify-item .v { text-align: right; min-width:0; }
+    .verify-item a {
+      word-break: break-all;
+      overflow-wrap: anywhere;
+      display: inline-block;
+      max-width: 100%;
     }
 
     footer {
@@ -317,14 +382,15 @@
           <img src="logo.png" alt="过个球年">
         </div>
         <div>
-          <div style="font-weight:700; color:var(--text);">过个球年</div>
-          <div style="font-size:12px; color:var(--text-soft);">GuoGeQiuNian · BNB Smart Chain</div>
+          <div style="font-weight:800; color:var(--text);">过个球年</div>
+          <div style="font-size:12px; color:var(--text-soft);">GuoGeQiuNian · BNB Smart Chain · GGQN</div>
         </div>
       </a>
 
       <nav>
         <a href="#about">项目介绍</a>
         <a href="#tokenomics">代币信息</a>
+        <a href="#verify">官方验证</a>
         <a href="#howto">如何购买</a>
         <a href="#roadmap">路线图</a>
         <a href="#community">社区</a>
@@ -342,7 +408,8 @@
 
         <div class="hero-badges">
           <div class="badge"><span class="badge-dot"></span> BNB Smart Chain · BEP20</div>
-          <div class="badge">总量：1,000,000,000 过个球年</div>
+          <div class="badge">代号：GGQN</div>
+          <div class="badge">总量：1,000,000,000</div>
           <div class="badge">小数位：18</div>
         </div>
 
@@ -353,7 +420,7 @@
             ⚽ 去交易过个球年
           </a>
 
-          <a class="btn btn-outline" href="#tokenomics">📄 查看合约 & 详情</a>
+          <a class="btn btn-outline" href="#verify">✅ 官方验证信息</a>
 
           <div style="flex-basis:100%; margin-top:10px; font-size:12px; color:var(--text-soft);">
             提示：先连接钱包并切换到 BNB Smart Chain；若交易失败可把滑点调到 1%～5% 再试。
@@ -362,14 +429,16 @@
       </div>
 
       <!-- 右侧信息卡片 -->
-      <div class="hero-card">
+      <div class="card">
         <h3>合约关键信息</h3>
 
         <div class="stat-row">
           <span class="stat-label">合约地址</span>
           <span class="stat-value">
-            <span class="stat-contract" id="contractAddress">0x522798ddb5facf944e57400356fab78929104676</span>
-            <button class="btn btn-outline" style="padding:6px 10px;font-size:12px;" onclick="copyCA()">📋 复制</button>
+            <span class="mono" style="max-width:360px; display:inline-block;" id="contractAddress">
+              0x522798ddb5facf944e57400356fab78929104676
+            </span>
+            <button class="btn btn-outline small-btn" onclick="copyText('0x522798ddb5facf944e57400356fab78929104676')">📋 复制</button>
           </span>
         </div>
 
@@ -379,8 +448,13 @@
         </div>
 
         <div class="stat-row">
+          <span class="stat-label">代币名称 / 代号</span>
+          <span class="stat-value">过个球年 / GGQN</span>
+        </div>
+
+        <div class="stat-row">
           <span class="stat-label">总发行量</span>
-          <span class="stat-value">1,000,000,000 过个球年</span>
+          <span class="stat-value">1,000,000,000</span>
         </div>
 
         <div class="stat-row">
@@ -392,26 +466,106 @@
           <span class="stat-label">合约模板</span>
           <span class="stat-value">OpenZeppelin ERC20</span>
         </div>
+
+        <!-- 官方验证信息（BscScan / 钱包审核最爱） -->
+        <div class="verify-box" id="verify">
+          <div class="verify-title">
+            <h4>官方验证信息（For Verification）</h4>
+            <span class="verify-hint">用于 BscScan / 钱包审核核验</span>
+          </div>
+
+          <div class="verify-list">
+            <div class="verify-item">
+              <span class="k">Website</span>
+              <span class="v">
+                <a href="https://ggqn.github.io/guogeqiunian-site/" target="_blank" rel="noopener">
+                  https://ggqn.github.io/guogeqiunian-site/
+                </a>
+              </span>
+            </div>
+
+            <div class="verify-item">
+              <span class="k">Official Email</span>
+              <span class="v">
+                <a href="mailto:ggqingn@gmail.com">ggqingn@gmail.com</a>
+              </span>
+            </div>
+
+            <div class="verify-item">
+              <span class="k">Telegram</span>
+              <span class="v">
+                <a href="https://t.me/guogeqiunian" target="_blank" rel="noopener">
+                  https://t.me/guogeqiunian
+                </a>
+              </span>
+            </div>
+
+            <div class="verify-item">
+              <span class="k">X (Twitter)</span>
+              <span class="v">
+                <a href="https://x.com/guogeqiunian" target="_blank" rel="noopener">
+                  https://x.com/guogeqiunian
+                </a>
+              </span>
+            </div>
+
+            <div class="verify-item">
+              <span class="k">GitHub</span>
+              <span class="v">
+                <a href="https://github.com/GGQN/ggqn-assets" target="_blank" rel="noopener">
+                  https://github.com/GGQN/ggqn-assets
+                </a>
+              </span>
+            </div>
+
+            <div class="verify-item">
+              <span class="k">Logo (32×32)</span>
+              <span class="v">
+                <a href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" target="_blank" rel="noopener">
+                  https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png
+                </a>
+              </span>
+            </div>
+
+            <div class="verify-item">
+              <span class="k">Contract</span>
+              <span class="v">
+                <span class="mono">0x522798ddb5facf944e57400356fab78929104676</span>
+              </span>
+            </div>
+
+            <div class="verify-item">
+              <span class="k">BscScan</span>
+              <span class="v">
+                <a href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676" target="_blank" rel="noopener">
+                  https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- 项目介绍 -->
     <section id="about">
       <h2>项目介绍 · About</h2>
-      <p>「过个球年」是BNBChain上的中文meme币，源自网络热门话题"过个球年"，象征了对现实无奈但永不妥协的互联网精神。</p>
-      <p>在2026年中文meme爆发季，它代表了中国文化对年的重视，和对世界杯的展望。</p>
+      <p>「过个球年」是 BNB Chain 上的中文 Meme 代币，源自网络热门话题“过个球年”，象征了对现实无奈但永不妥协的互联网精神。</p>
+      <p>在 2026 年中文 Meme 爆发季，它代表了中国文化对“年”的重视，以及对世界杯的共同展望。</p>
     </section>
 
     <!-- 代币信息 -->
     <section id="tokenomics">
       <h2>代币信息 · Tokenomics</h2>
-      <p>以下为当前版本合约配置（如有升级会在官方渠道同步公告）：</p>
+      <p>以下为当前合约配置（如有升级会在官方渠道同步公告）：</p>
 
       <div class="tokenomics-grid">
         <div class="token-card"><strong>链 & 标准</strong><br />BNB Smart Chain（BEP20）</div>
-        <div class="token-card"><strong>总发行量</strong><br />1,000,000,000 过个球年（固定总量，无增发）</div>
+        <div class="token-card"><strong>代币名称 / 代号</strong><br />过个球年（GGQN）</div>
+        <div class="token-card"><strong>总发行量</strong><br />1,000,000,000（固定总量，无增发）</div>
         <div class="token-card"><strong>小数位</strong><br />18</div>
-        <div class="token-card"><strong>合约地址</strong><br /><span class="stat-contract">0x522798ddb5facf944e57400356fab78929104676</span></div>
+        <div class="token-card"><strong>合约地址</strong><br /><span class="mono">0x522798ddb5facf944e57400356fab78929104676</span></div>
       </div>
 
       <p style="margin-top:10px;">
@@ -427,7 +581,7 @@
       <ol class="howto-steps">
         <li>1）准备钱包：使用 MetaMask / Trust Wallet 等，并确保钱包里有少量 BNB（用于购买与手续费）。</li>
         <li>2）切换网络：把钱包网络切换到 <strong>BNB Smart Chain（BSC）</strong>。</li>
-        <li>3）打开交易页面：点击本官网的「去交易过个球年」，在 PancakeSwap 里会自动带入代币。</li>
+        <li>3）打开交易页面：点击本官网「去交易过个球年」，在 PancakeSwap 里会自动带入代币。</li>
         <li>4）购买：输入要花的 BNB 数量 → 点击 Swap → 在钱包里确认交易。</li>
       </ol>
 
@@ -449,10 +603,10 @@
     <section id="roadmap">
       <h2>路线图 · Roadmap</h2>
       <ul class="roadmap-list">
-        <li class="roadmap-item"><strong>阶段一 · 启动</strong>：部署合约、创建流动性池、完成基础官网与 Logo、开通微博 / 推特 / 电报群。</li>
-        <li class="roadmap-item"><strong>阶段二 · 社区建设</strong>：联合社区举办红包雨、竞猜活动，让更多人了解「过个球年」这个梗。</li>
-        <li class="roadmap-item"><strong>阶段三 · 品牌升级</strong>：申请各大钱包展示 Logo，接入更多工具网站（行情、数据分析、图表网站等）。</li>
-        <li class="roadmap-item"><strong>阶段四 · 生态尝试</strong>：视社区发展情况，尝试小游戏、小工具、NFT 主题活动等周边内容。</li>
+        <li class="roadmap-item"><strong>阶段一 · 启动</strong>：部署合约、完成基础官网与 Logo、开通 X / Telegram 社区与公告。</li>
+        <li class="roadmap-item"><strong>阶段二 · 社区建设</strong>：竞猜、红包、互动任务等活动，让更多人了解「过个球年」这个梗。</li>
+        <li class="roadmap-item"><strong>阶段三 · 品牌升级</strong>：申请钱包展示 Logo，接入更多工具网站（行情、数据、图表等）。</li>
+        <li class="roadmap-item"><strong>阶段四 · 生态尝试</strong>：视社区发展，尝试小游戏、小工具、NFT 主题活动等周边内容。</li>
       </ul>
     </section>
 
@@ -463,39 +617,37 @@
 
       <div class="social-links">
         <a href="https://x.com/guogeqiunian" target="_blank" rel="noopener">🐦 X（Twitter）@guogeqiunian</a>
-        <a href="https://t.me/+7AsFDAlwnIszMjZl" target="_blank" rel="noopener">📣 Telegram 群</a>
+        <a href="https://t.me/guogeqiunian" target="_blank" rel="noopener">📣 Telegram 群</a>
+        <a href="https://github.com/GGQN/ggqn-assets" target="_blank" rel="noopener">💻 GitHub: ggqn-assets</a>
+        <a href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" target="_blank" rel="noopener">🖼️ Logo(32×32) Raw</a>
         <a href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676" target="_blank" rel="noopener">🔎 BscScan 合约页面</a>
-        <a href="mailto:ggqingn@gmail.com">📧 Email: ggqingn@gmail.com</a>
+        <a href="mailto:ggqingn@gmail.com" target="_blank" rel="noopener">📧 Email: ggqingn@gmail.com</a>
       </div>
     </section>
 
-   <footer>
-  © 2026  过个球年 · GuoGeQiuNian. 本页面仅为项目介绍，不构成任何投资建议。<br>
-  <span style="opacity:.6;">Build: 2026-02-03-01</span>
-</footer>
+    <footer>
+      © 2026 过个球年 · GuoGeQiuNian (GGQN). 本页面仅为项目介绍，不构成任何投资建议。｜联系：
+      <a href="mailto:ggqingn@gmail.com">ggqingn@gmail.com</a>
+      <br/>
+      <span style="opacity:.6;">Build: 2026-02-06-02</span>
+    </footer>
+
   </div>
 
   <script>
-    function copyCA() {
-      const ca = "0x522798ddb5facf944e57400356fab78929104676";
-      navigator.clipboard.writeText(ca).then(() => {
-        alert("已复制合约地址！");
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("已复制！");
       }).catch(() => {
         const ta = document.createElement("textarea");
-        ta.value = ca;
+        ta.value = text;
         document.body.appendChild(ta);
         ta.select();
         document.execCommand("copy");
         document.body.removeChild(ta);
-        alert("已复制合约地址！");
+        alert("已复制！");
       });
     }
   </script>
 </body>
 </html>
-
-
-
-
-
-
