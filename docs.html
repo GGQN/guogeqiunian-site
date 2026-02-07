@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>过个球年（GuoGeQiuNian）— One-page Docs / Whitepaper</title>
+  <meta name="description" content="过个球年（GuoGeQiuNian）一页文档：合约信息、代币参数、官方链接、路线图与风险提示。" />
+  <style>
+    :root { --bg:#0b0f19; --card:#121a2a; --text:#e8eefc; --muted:#aab7d8; --line:#22304d; --accent:#5aa2ff; }
+    body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:linear-gradient(180deg,#070a12,#0b0f19); color:var(--text); }
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .wrap{ max-width:920px; margin:0 auto; padding:28px 16px 60px; }
+    .top{ display:flex; gap:12px; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+    .badge{ font-size:12px; color:var(--muted); border:1px solid var(--line); padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.02); }
+    h1{ font-size:28px; margin:18px 0 6px; }
+    .sub{ color:var(--muted); margin:0 0 18px; line-height:1.6; }
+    .card{ background:rgba(18,26,42,0.85); border:1px solid var(--line); border-radius:16px; padding:18px; margin:12px 0; }
+    h2{ font-size:18px; margin:0 0 10px; }
+    ul{ margin:10px 0 0 18px; color:var(--text); line-height:1.7; }
+    .kv{ display:grid; grid-template-columns:180px 1fr; gap:8px 14px; }
+    .k{ color:var(--muted); }
+    .v{ word-break:break-all; }
+    .code{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:13px; background:rgba(0,0,0,0.25); border:1px solid var(--line); padding:10px 12px; border-radius:12px; overflow:auto; }
+    .footer{ margin-top:18px; color:var(--muted); font-size:13px; }
+    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    .btn{ display:inline-block; border:1px solid var(--line); padding:10px 12px; border-radius:12px; background:rgba(255,255,255,0.03); }
+    .btn:hover{ background:rgba(255,255,255,0.06); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="badge">One-page Docs / Whitepaper</div>
+      <div class="badge"><a href="./index.html">← 返回首页</a></div>
+    </div>
+
+    <h1>过个球年（GuoGeQiuNian）</h1>
+    <p class="sub">
+      这是一个面向社区的 Meme/文化代币，灵感来自“春节 + 世界杯”的双重节日氛围：用轻松幽默的方式，凝聚“压力释放、一起看球、一起跨年”的社区共识。
+      本项目定位为社区文化与互动载体，不承诺任何收益，不构成投资建议。
+    </p>
+
+    <div class="card">
+      <h2>链与合约信息</h2>
+      <div class="kv">
+        <div class="k">网络</div><div class="v">BNB Smart Chain（BEP-20）</div>
+        <div class="k">合约地址</div><div class="v code">0x522798dB5FACF944e57400356FaB78929104676</div>
+        <div class="k">合约验证</div><div class="v">Contract Source Verified（Exact Match）</div>
+        <div class="k">合约功能</div><div class="v">标准 BEP-20/ERC-20 只读接口（allowance / balanceOf / decimals / name / symbol / totalSupply）</div>
+        <div class="k">供应机制</div><div class="v">固定总量（Fixed Supply），无增发/铸币权限（No Mint）</div>
+        <div class="k">管理/税费控制</div><div class="v">无后台管理员/税费控制函数（No Admin / No Tax Control）</div>
+      </div>
+      <div class="btnrow">
+        <a class="btn" href="https://bscscan.com/address/0x522798dB5FACF944e57400356FaB78929104676" target="_blank" rel="noreferrer">在 BscScan 查看合约</a>
+        <a class="btn" href="https://bscscan.com/token/0x522798dB5FACF944e57400356FaB78929104676" target="_blank" rel="noreferrer">在 BscScan 查看 Token</a>
+      </div>
+      <div class="footer">备注：以上以链上合约为准。</div>
+    </div>
+
+    <div class="card">
+      <h2>代币参数（Tokenomics）</h2>
+      <div class="kv">
+        <div class="k">总供应量</div><div class="v">1,000,000,000</div>
+        <div class="k">代币名称（Name）</div><div class="v">过个球年（GuoGeQiuNian）</div>
+        <div class="k">代币符号（Symbol）</div><div class="v">过个球年</div>
+        <div class="k">用途定位</div><div class="v">社区文化传播、互动活动、内容共创、社区奖励（具体规则以公告为准）</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>官方渠道（Official Links）</h2>
+      <ul>
+        <li>官网：<a href="https://ggqn.github.io/guogeqiunian-site/" target="_blank" rel="noreferrer">https://ggqn.github.io/guogeqiunian-site/</a></li>
+        <li>X（Twitter）：<a href="https://x.com/guogeqiunian" target="_blank" rel="noreferrer">https://x.com/guogeqiunian</a></li>
+        <li>Telegram：<a href="https://t.me/guogeqiunian" target="_blank" rel="noreferrer">https://t.me/guogeqiunian</a></li>
+        <li>GitHub：<a href="https://github.com/GGQN/ggqn-assets" target="_blank" rel="noreferrer">https://github.com/GGQN/ggqn-assets</a></li>
+        <li>联系邮箱：<a href="mailto:ggqingn@gmail.com">ggqingn@gmail.com</a></li>
+        <li>Logo（32×32 PNG）：<a href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" target="_blank" rel="noreferrer">https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>路线图（Roadmap）</h2>
+      <ul>
+        <li><b>阶段 1：基础信息完善</b> — 官网/社交账号统一、合约与信息公开、BscScan 资料更新</li>
+        <li><b>阶段 2：社区活动启动</b> — 节日主题内容共创、转发互动、表情包/海报等社区素材发布</li>
+        <li><b>阶段 3：生态协作探索</b> — 与社区工具、内容平台或 DApp 的合作尝试（若有，以公告为准）</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>风险提示（重要）</h2>
+      <ul>
+        <li>本项目为 Meme/社区文化代币，价格波动可能非常剧烈。</li>
+        <li>任何第三方宣传不代表官方立场，请以官网与置顶公告为准。</li>
+        <li>本文档仅作信息披露与社区沟通使用，不构成投资、法律或财务建议。</li>
+      </ul>
+    </div>
+
+    <p class="footer">© GuoGeQiuNian community. Last updated: 2026-02-07</p>
+  </div>
+</body>
+</html>
