@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>过个球年 · 官方网站</title>
-  <meta name="description" content="过个球年（GuoGeQiuNian / GGQN）｜BNB Smart Chain（BEP20）中文 Meme 代币，总量 10 亿，固定总量，无增发。" />
+  <meta name="description" content="过个球年（GuoGeQiuNian / GGQN）｜BNB Smart Chain（BEP-20）中文 Meme 代币，总量 10 亿，固定总量。" />
 
   <!-- ===== 分享预览 ===== -->
   <meta property="og:title" content="过个球年 · 官方网站" />
-  <meta property="og:description" content="BNB Smart Chain（BEP20）中文 Meme 代币，总量 10 亿，固定总量，无增发。" />
+  <meta property="og:description" content="BNB Smart Chain（BEP-20）中文 Meme 代币，总量 10 亿，固定总量。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ggqn.github.io/guogeqiunian-site/" />
   <!-- og:image 用绝对地址 + 版本号，避免缓存 -->
@@ -196,6 +196,7 @@
       margin-top:10px;
       color: rgba(229,231,235,.75);
       font-size:12px;
+      line-height:1.6;
     }
 
     /* ===== 右侧关键信息 ===== */
@@ -283,9 +284,10 @@
       margin-top:12px;
       color:rgba(229,231,235,.68);
       font-size:12px;
+      line-height:1.6;
     }
 
-    /* ===== 官方链接汇总（防伪）——单独一整块（你要的 A 方案）===== */
+    /* ===== 官方链接汇总（防伪）===== */
     .verifyWrap{
       padding:16px 16px 14px;
       background: linear-gradient(180deg, rgba(34,197,94,.10), rgba(2,6,23,.20));
@@ -309,6 +311,7 @@
     .verifyTop .sub{
       color: rgba(229,231,235,.70);
       font-size:12px;
+      line-height:1.6;
     }
     .verifyTop .right{
       text-align:right;
@@ -318,13 +321,10 @@
       white-space:nowrap;
     }
 
-    .verifyRows{
-      display:grid;
-      gap:10px;
-    }
+    .verifyRows{display:grid;gap:10px;}
     .vrow{
       display:grid;
-      grid-template-columns: 160px 1fr;
+      grid-template-columns: 170px 1fr;
       gap:10px;
       align-items:center;
       padding:10px 12px;
@@ -332,10 +332,7 @@
       border:1px solid rgba(255,255,255,.12);
       background: rgba(2,6,23,.28);
     }
-    .vkey{
-      color: rgba(229,231,235,.65);
-      font-size:13px;
-    }
+    .vkey{color: rgba(229,231,235,.65);font-size:13px;}
     .vval{
       text-align:right;
       font-size:13px;
@@ -344,7 +341,6 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
     .vval a{color:#86efac}
-    .vval a:hover{text-decoration:underline}
     .verifyFoot{
       margin-top:10px;
       display:flex;
@@ -393,6 +389,7 @@
       text-align:center;
       color: rgba(229,231,235,.55);
       font-size:12px;
+      line-height:1.7;
     }
 
     /* ===== 响应式 ===== */
@@ -442,27 +439,28 @@
       <div class="card pad">
         <div class="heroTitle">用一颗球，跨过这一年。</div>
         <p class="heroDesc">
-          「过个球年」是部署在 BNB Smart Chain（BEP20）上的节日 & 世界杯主题中文 Meme 代币，
-          总量 10 亿，固定总量，无增发、无预留，社区自发建设，一起踢走霉运，迎接新一年的好运气。
+          「过个球年」是部署在 BNB Smart Chain（BEP-20）上的节日 & 世界杯主题中文 Meme 代币，
+          总量 10 亿，固定总量，社区自发建设，一起踢走霉运，迎接新一年的好运气。
         </p>
 
         <div class="chips">
-          <span class="chip"><span class="dot"></span>BNB Smart Chain · BEP20</span>
-          <span class="chip">代号：过个球年</span>
-          <span class="chip">总量：1,000,000,000</span>
-          <span class="chip">小数位：18</span>
+          <span class="chip"><span class="dot"></span>BNB Smart Chain · BEP-20</span>
+          <span class="chip">Name：过个球年</span>
+          <span class="chip">Symbol：GGQN</span>
+          <span class="chip">Total Supply：1,000,000,000</span>
+          <span class="chip">Decimals：18</span>
         </div>
 
         <div class="actions">
           <a class="btn btnPrimary" target="_blank" rel="noopener"
-             href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x522798ddb5facf944e57400356fab78929104676">
-            ⚽ 去交易过个球年
+             href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x522798dB5FACF944e57400356FaB78929104676">
+            ⚽ 去交易 $GGQN
           </a>
           <button class="btn btnGhost" onclick="jumpToVerify()">✅ 查看官方链接</button>
         </div>
 
         <div class="hint">
-          提示：先连接钱包并切换到 BNB Smart Chain；若交易失败可把滑点调到 1%～5% 再试。
+          提示：先连接钱包并切换到 BNB Smart Chain；交易参数（如滑点）以交易界面提示为准。
         </div>
       </div>
 
@@ -473,19 +471,19 @@
         <div class="kvRow">
           <div class="kvKey">合约地址</div>
           <div class="kvVal">
-            <span class="mono" id="CA">0x522798ddb5facf944e57400356fab78929104676</span>
+            <span class="mono" id="CA">0x522798dB5FACF944e57400356FaB78929104676</span>
             <button class="copyMini" onclick="copyText(document.getElementById('CA').innerText)">复制</button>
           </div>
         </div>
 
         <div class="kvRow">
           <div class="kvKey">链 & 标准</div>
-          <div class="kvVal">BNB Smart Chain · BEP20</div>
+          <div class="kvVal">BNB Smart Chain · BEP-20</div>
         </div>
 
         <div class="kvRow">
-          <div class="kvKey">代币名称 / 代号</div>
-          <div class="kvVal">过个球年 / 过个球年</div>
+          <div class="kvKey">名称 / Symbol</div>
+          <div class="kvVal">过个球年 / GGQN</div>
         </div>
 
         <div class="kvRow">
@@ -499,7 +497,7 @@
         </div>
 
         <div class="kvRow">
-          <div class="kvKey">合约模板</div>
+          <div class="kvKey">实现参考</div>
           <div class="kvVal">OpenZeppelin ERC20</div>
         </div>
       </div>
@@ -512,7 +510,7 @@
         <p>About</p>
       </div>
       <div style="color:rgba(229,231,235,.78);font-size:13px;line-height:1.9;">
-        「过个球年」是 BNBChain 上的中文 Meme 代币，源自网络热门话题“过个球年”，象征了对现实无奈但永不妥协的互联网精神。<br/>
+        「过个球年」是 BNB Chain 上的中文 Meme 代币，源自网络热门话题“过个球年”，象征了对现实无奈但永不妥协的互联网精神。<br/>
         在 2026 年春节与世界杯热度交汇之际，用“球”把霉运踢出去，用“年”把好运迎进来。
       </div>
     </div>
@@ -528,10 +526,10 @@
         <div class="miniCard">
           <div class="miniTitle">基础参数</div>
           <ul class="list">
-            <li><b>链：</b>BNB Smart Chain（BEP20）</li>
-            <li><b>名称：</b>过个球年</li>
-            <li><b>代号：</b>过个球年</li>
-            <li><b>小数位：</b>18</li>
+            <li><b>链：</b>BNB Smart Chain（BEP-20）</li>
+            <li><b>Name：</b>过个球年</li>
+            <li><b>Symbol：</b>GGQN</li>
+            <li><b>Decimals：</b>18</li>
           </ul>
         </div>
 
@@ -539,18 +537,18 @@
           <div class="miniTitle">供应与合约</div>
           <ul class="list">
             <li><b>总量：</b>1,000,000,000（固定总量）</li>
-            <li><b>合约：</b><span class="mono">0x522798ddb5facf944e57400356fab78929104676</span></li>
-            <li><b>模板：</b>OpenZeppelin ERC20</li>
+            <li><b>合约：</b><span class="mono">0x522798dB5FACF944e57400356FaB78929104676</span></li>
+            <li><b>实现参考：</b>OpenZeppelin ERC20</li>
           </ul>
         </div>
       </div>
 
       <div class="note">
-        合约为标准 ERC20 实现。请务必 DYOR，理性参与。
+        合约为标准代币实现；请务必核验合约地址并 DYOR。
       </div>
     </div>
 
-    <!-- ✅ 官方链接汇总（防伪）——单独一整块（A方案核心） -->
+    <!-- ✅ 官方链接汇总（防伪） -->
     <div class="section card verifyWrap" id="verify">
       <div class="sectionHead" style="margin-bottom:12px;">
         <h2>官方链接汇总（防伪）</h2>
@@ -558,13 +556,13 @@
       </div>
 
       <div style="color:rgba(229,231,235,.75);font-size:13px;line-height:1.8;margin:0 0 12px;">
-        为避免假冒账号与钓鱼链接，这里统一汇总本项目的官网、社媒、Logo 与合约地址。请以本页为准。
+        为避免假冒账号与钓鱼链接，这里统一汇总本项目的官网、Docs、社媒、Logo 与合约地址。请以本页为准。
       </div>
 
       <div class="verifyTop">
         <div class="left">
           <div class="ttl">官方链接（For Verification）</div>
-          <div class="sub">请认准本页链接（官网 / 邮箱 / 社媒 / Logo / 合约）</div>
+          <div class="sub">请认准本页链接（官网 / Docs / 邮箱 / 社媒 / Logo / 合约）</div>
         </div>
         <div class="right">
           用途：官方信息核验<br/>
@@ -576,6 +574,11 @@
         <div class="vrow">
           <div class="vkey">Website</div>
           <div class="vval"><a target="_blank" rel="noopener" href="https://ggqn.github.io/guogeqiunian-site/">https://ggqn.github.io/guogeqiunian-site/</a></div>
+        </div>
+
+        <div class="vrow">
+          <div class="vkey">Docs / Whitepaper</div>
+          <div class="vval"><a target="_blank" rel="noopener" href="https://ggqn.github.io/guogeqiunian-site/docs.html">https://ggqn.github.io/guogeqiunian-site/docs.html</a></div>
         </div>
 
         <div class="vrow">
@@ -594,26 +597,37 @@
         </div>
 
         <div class="vrow">
+          <div class="vkey">Pinned X Announcement</div>
+          <div class="vval"><a target="_blank" rel="noopener" href="https://x.com/guogeqiunian/status/2020070233764249711">https://x.com/guogeqiunian/status/2020070233764249711</a></div>
+        </div>
+
+        <div class="vrow">
           <div class="vkey">GitHub</div>
           <div class="vval"><a target="_blank" rel="noopener" href="https://github.com/GGQN/ggqn-assets">https://github.com/GGQN/ggqn-assets</a></div>
         </div>
 
         <div class="vrow">
-          <div class="vkey">Logo (32×32)</div>
+          <div class="vkey">Logo (32×32 PNG)</div>
           <div class="vval"><a target="_blank" rel="noopener"
-            href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png">https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png</a></div>
+            href="https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.png">https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.png</a></div>
+        </div>
+
+        <div class="vrow">
+          <div class="vkey">Logo (32×32 SVG)</div>
+          <div class="vval"><a target="_blank" rel="noopener"
+            href="https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.svg">https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.svg</a></div>
         </div>
 
         <div class="vrow">
           <div class="vkey">BscScan</div>
           <div class="vval"><a target="_blank" rel="noopener"
-            href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676">https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676</a></div>
+            href="https://bscscan.com/token/0x522798dB5FACF944e57400356FaB78929104676">https://bscscan.com/token/0x522798dB5FACF944e57400356FaB78929104676</a></div>
         </div>
 
         <div class="vrow">
           <div class="vkey">Contract</div>
           <div class="vval">
-            <span id="CA2">0x522798ddb5facf944e57400356fab78929104676</span>
+            <span id="CA2">0x522798dB5FACF944e57400356FaB78929104676</span>
             &nbsp;&nbsp;
             <button class="copyMini" onclick="copyText(document.getElementById('CA2').innerText)">复制</button>
           </div>
@@ -639,18 +653,18 @@
 
       <div class="actions" style="margin-top:12px;">
         <a class="btn btnPrimary" target="_blank" rel="noopener"
-           href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x522798ddb5facf944e57400356fab78929104676">
-          ⚽ 立即去 PancakeSwap 购买
+           href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x522798dB5FACF944e57400356FaB78929104676">
+          ⚽ 立即去 PancakeSwap
         </a>
         <a class="btn btnGhost" target="_blank" rel="noopener"
-           href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676">
+           href="https://bscscan.com/token/0x522798dB5FACF944e57400356FaB78929104676">
           🔎 查看 BscScan
         </a>
       </div>
 
       <div class="risk">
-        ⚠ 风险提示：加密资产波动极大，可能导致本金亏损。<br/>
-        本页面仅为项目介绍，不构成任何投资建议。请量力而行，理性参与。
+        ⚠ 风险提示：加密资产波动较大，可能导致本金亏损。<br/>
+        本页面仅为项目介绍与信息汇总，不构成任何投资建议。请量力而行，理性参与。
       </div>
     </div>
 
@@ -662,9 +676,9 @@
       </div>
 
       <ul class="bullets">
-        <li><b>阶段一 · 启动：</b>部署合约、创建流动性池、完成官网与 Logo、开通官方渠道。</li>
+        <li><b>阶段一 · 启动：</b>部署合约、创建流动性池、完成官网与品牌素材、开通官方渠道。</li>
         <li><b>阶段二 · 社区：</b>活动/竞猜/内容共创，扩大传播。</li>
-        <li><b>阶段三 · 展示：</b>申请钱包 Logo、完善数据入口与资料。</li>
+        <li><b>阶段三 · 展示：</b>申请钱包 Logo、完善资料与核验入口。</li>
         <li><b>阶段四 · 生态：</b>小游戏/小工具/NFT 等周边尝试（视社区发展）。</li>
       </ul>
     </div>
@@ -678,14 +692,15 @@
 
       <ul class="list" style="line-height:2;">
         <li>🐦 X：<a target="_blank" rel="noopener" href="https://x.com/guogeqiunian">https://x.com/guogeqiunian</a></li>
+        <li>📌 置顶公告：<a target="_blank" rel="noopener" href="https://x.com/guogeqiunian/status/2020070233764249711">Pinned X Announcement</a></li>
         <li>📣 Telegram：<a target="_blank" rel="noopener" href="https://t.me/guogeqiunian">https://t.me/guogeqiunian</a></li>
-        <li>🔎 BscScan：<a target="_blank" rel="noopener" href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676">合约页面</a></li>
+        <li>🔎 BscScan：<a target="_blank" rel="noopener" href="https://bscscan.com/token/0x522798dB5FACF944e57400356FaB78929104676">合约页面</a></li>
         <li>📧 Email：<a href="mailto:ggqingn@gmail.com">ggqingn@gmail.com</a></li>
       </ul>
     </div>
 
     <footer>
-      本页面仅为项目介绍，不构成任何投资建议。<br/>
+      本页面仅为项目介绍与信息汇总，不构成任何投资建议。<br/>
       © 2026 过个球年 · GuoGeQiuNian
     </footer>
   </div>
@@ -720,7 +735,3 @@
   </script>
 </body>
 </html>
-
-
-
-
