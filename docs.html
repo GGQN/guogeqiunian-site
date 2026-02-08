@@ -64,7 +64,7 @@
     <div class="topbar">
       <div class="brand">
         <div class="logo">
-          <img src="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" alt="GGQN Logo" />
+          <img src="https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.png" alt="GGQN Logo" />
         </div>
         <div>
           <div class="title">GuoGeQiuNian (过个球年) / $GGQN</div>
@@ -111,7 +111,7 @@
             <div class="k">Standard</div><div>BEP-20 (ERC-20 compatible)</div>
             <div class="k">Total Supply</div><div><b>1,000,000,000</b> (fixed supply)</div>
             <div class="k">Verification</div><div>Contract source code verified on BscScan (<b>Exact Match</b>)</div>
-            <div class="k">Controls</div><div>Standard token only; <b>no mint / no admin / no tax control functions</b></div>
+            <div class="k">Controls</div><div>Standard token functions only (<b>no mint/tax control logic observed</b> in verified source).</div>
           </div>
 
           <div class="ok">
@@ -127,7 +127,7 @@
           <h2 id="tokenomics">Tokenomics (Simple)</h2>
           <ul>
             <li>Fixed supply: <b>1,000,000,000</b>.</li>
-            <li>No protocol-level tax (no tax control functions in the contract).</li>
+            <li>No protocol-level tax (no tax control logic observed in the verified source).</li>
             <li>Community-driven distribution and engagement.</li>
           </ul>
 
@@ -196,7 +196,7 @@
             <div class="k">标准</div><div>BEP-20（兼容 ERC-20）</div>
             <div class="k">总量</div><div><b>1,000,000,000</b>（固定总量）</div>
             <div class="k">合约验证</div><div>BscScan 已验证（<b>Exact Match</b>）</div>
-            <div class="k">权限/控制</div><div>标准代币；<b>无增发/无管理员/无税费控制函数</b></div>
+            <div class="k">权限/控制</div><div>标准代币函数为主（在已验证源码中<b>未发现增发/税费控制逻辑</b>）。</div>
           </div>
 
           <div class="ok">
@@ -212,7 +212,7 @@
           <h2 id="tokenomics-zh">代币模型（简版）</h2>
           <ul>
             <li>固定总量：<b>10 亿</b>。</li>
-            <li>合约层面无税费（无税费控制函数）。</li>
+            <li>合约层面无税费（在已验证源码中未发现税费控制逻辑）。</li>
             <li>社区驱动：以社区互动与传播为主。</li>
           </ul>
 
@@ -268,7 +268,7 @@
           <div><a href="https://ggqn.github.io/guogeqiunian-site/docs.html" target="_blank" rel="noreferrer">https://ggqn.github.io/guogeqiunian-site/docs.html</a></div>
 
           <div class="k">BscScan Token</div>
-          <div><a href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676" target="_blank" rel="noreferrer">https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676</a></div>
+          <div><a href="https://bscscan.com/token/0x522798dB5FACF944e57400356FaB78929104676" target="_blank" rel="noreferrer">https://bscscan.com/token/0x522798dB5FACF944e57400356FaB78929104676</a></div>
         </div>
 
         <h2>Social</h2>
@@ -294,8 +294,8 @@
 
         <h2>Logo (32×32)</h2>
         <div class="kv">
-          <div class="k">PNG</div>
-          <div><a href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" target="_blank" rel="noreferrer">https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png</a></div>
+          <div class="k">PNG (CDN)</div>
+          <div><a href="https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.png" target="_blank" rel="noreferrer">https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.png</a></div>
 
           <div class="k">SVG (stable CDN)</div>
           <div><a href="https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.svg" target="_blank" rel="noreferrer">https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.svg</a></div>
@@ -336,7 +336,7 @@
     }
 
     (function(){
-      // english default
+      // English default
       try {
         const saved = localStorage.getItem('ggqn_lang');
         if(saved === 'zh') setLang('zh');
