@@ -3,39 +3,62 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>GuoGeQiuNian (过个球年) — Docs / Whitepaper (Lite)</title>
-  <meta name="description" content="Official docs & verifiable links for GuoGeQiuNian (过个球年) / $GGQN on BNB Chain (BEP-20)." />
+  <title>GuoGeQiuNian (过个球年) / $GGQN — Official Docs & Verification</title>
+  <meta name="description" content="Official verification page (single source of truth) and litepaper for GuoGeQiuNian (过个球年) / $GGQN on BNB Chain (BEP-20)." />
   <style>
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:#071018; color:#e8eef6; }
-    a { color:#76c7ff; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .wrap { max-width:1100px; margin:0 auto; padding:28px 16px; }
-    .topbar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px; }
-    .brand { display:flex; align-items:center; gap:10px; }
-    .logo { width:40px; height:40px; border-radius:10px; background:#0f2230; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-    .logo img { width:32px; height:32px; }
-    .pill { font-size:12px; padding:6px 10px; border:1px solid rgba(255,255,255,.14); border-radius:999px; color:#cfe6ff; }
-    .lang { display:flex; gap:8px; }
-    .btn { cursor:pointer; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06); color:#e8eef6; padding:8px 12px; border-radius:10px; font-size:13px; }
-    .btn.active { border-color:#76c7ff; box-shadow:0 0 0 2px rgba(118,199,255,.15) inset; }
-    .grid { display:grid; grid-template-columns: 1.2fr .8fr; gap:16px; }
-    .card { background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.10); border-radius:16px; padding:16px; }
-    h1,h2 { margin:0 0 10px 0; }
-    h1 { font-size:20px; }
-    h2 { font-size:16px; margin-top:16px; }
-    .muted { color:rgba(232,238,246,.75); font-size:13px; line-height:1.5; }
-    .kv { display:grid; grid-template-columns: 170px 1fr; gap:8px 12px; font-size:13px; }
-    .kv div { padding:6px 0; border-bottom:1px dashed rgba(255,255,255,.10); }
-    .kv .k { color:rgba(232,238,246,.75); }
-    code { background:rgba(0,0,0,.25); padding:2px 6px; border-radius:8px; }
-    ul { margin:8px 0 0 18px; }
-    .warn { border:1px solid rgba(255,105,105,.35); background:rgba(255,105,105,.08); padding:10px 12px; border-radius:14px; margin-top:12px; font-size:13px; }
-    .footer { margin-top:16px; text-align:center; color:rgba(232,238,246,.55); font-size:12px; }
-    @media (max-width: 900px){ .grid { grid-template-columns: 1fr; } .kv { grid-template-columns: 140px 1fr; } }
-    .lang-block { display:none; }
-    .lang-block.show { display:block; }
+    :root{
+      --bg:#071018;
+      --card:rgba(255,255,255,.04);
+      --border:rgba(255,255,255,.12);
+      --text:#e8eef6;
+      --muted:rgba(232,238,246,.75);
+      --link:#76c7ff;
+      --warnBorder:rgba(255,105,105,.35);
+      --warnBg:rgba(255,105,105,.08);
+      --okBorder:rgba(120,255,180,.30);
+      --okBg:rgba(120,255,180,.06);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 16px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:12px;background:#0f2230;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--border)}
+    .logo img{width:32px;height:32px}
+    .title{font-weight:800;font-size:16px;line-height:1.2}
+    .subtitle{color:var(--muted);font-size:12px;margin-top:4px}
+    .lang{display:flex;gap:8px;align-items:center}
+    .btn{cursor:pointer;border:1px solid var(--border);background:rgba(255,255,255,.06);color:var(--text);padding:8px 12px;border-radius:10px;font-size:13px}
+    .btn.active{border-color:var(--link);box-shadow:0 0 0 2px rgba(118,199,255,.15) inset}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+    h1{font-size:18px;margin:0 0 10px 0}
+    h2{font-size:15px;margin:16px 0 10px 0}
+    .muted{color:var(--muted);font-size:13px;line-height:1.55}
+    code{background:rgba(0,0,0,.25);padding:2px 6px;border-radius:8px}
+    .kv{display:grid;grid-template-columns:170px 1fr;gap:8px 12px;font-size:13px}
+    .kv div{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.10)}
+    .kv .k{color:var(--muted)}
+    .pillRow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .pill{font-size:12px;padding:6px 10px;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#cfe6ff}
+    .ok{border:1px solid var(--okBorder);background:var(--okBg);padding:10px 12px;border-radius:14px;font-size:13px;margin-top:12px}
+    .warn{border:1px solid var(--warnBorder);background:var(--warnBg);padding:10px 12px;border-radius:14px;font-size:13px;margin-top:12px}
+    ul,ol{margin:8px 0 0 18px}
+    .copyline{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .copybtn{cursor:pointer;border:1px solid var(--border);background:rgba(255,255,255,.06);color:var(--text);padding:6px 10px;border-radius:10px;font-size:12px}
+    .small{font-size:12px;color:var(--muted)}
+    .footer{margin-top:14px;text-align:center;color:rgba(232,238,246,.55);font-size:12px}
+    .lang-block{display:none}
+    .lang-block.show{display:block}
+    @media(max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .kv{grid-template-columns:140px 1fr}
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="topbar">
@@ -44,148 +67,246 @@
           <img src="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" alt="GGQN Logo" />
         </div>
         <div>
-          <div style="font-weight:700;">GuoGeQiuNian (过个球年)</div>
-          <div class="muted">Lite Docs / Whitepaper — Official project information & links</div>
+          <div class="title">GuoGeQiuNian (过个球年) / $GGQN</div>
+          <div class="subtitle">Official Docs & Verification (Single Source of Truth)</div>
         </div>
       </div>
-      <div style="display:flex; gap:10px; align-items:center;">
-        <span class="pill">BNB Chain · BEP-20</span>
-        <div class="lang">
-          <button class="btn active" id="btn-en" onclick="setLang('en')">English</button>
-          <button class="btn" id="btn-zh" onclick="setLang('zh')">中文</button>
-        </div>
+
+      <div class="lang">
+        <button class="btn active" id="btn-en" onclick="setLang('en')">English</button>
+        <button class="btn" id="btn-zh" onclick="setLang('zh')">中文</button>
       </div>
     </div>
 
     <div class="grid">
-      <!-- LEFT: CONTENT -->
+      <!-- LEFT: MAIN CONTENT -->
       <div class="card">
-        <!-- ENGLISH -->
+        <!-- EN -->
         <div id="lang-en" class="lang-block show">
-          <h1>1) Overview</h1>
+          <h1 id="verification">Official Verification</h1>
           <div class="muted">
-            <b>GuoGeQiuNian (过个球年)</b> / <b>$过个球年</b> is a community meme token on BNB Chain.
-            It combines the festive spirit of the Chinese New Year with the excitement of football/WC season.
+            This page is the <b>single source of truth</b> for GuoGeQiuNian (过个球年) / <b>$GGQN</b>.
+            If you see other “official” links elsewhere, please verify them here and via the pinned X announcement.
+          </div>
+
+          <div class="pillRow">
+            <span class="pill">BNB Smart Chain (BSC)</span>
+            <span class="pill">BEP-20</span>
+            <span class="pill">Fixed Supply</span>
+            <span class="pill">Source Verified</span>
+          </div>
+
+          <h2 id="basics">Contract & Token Basics</h2>
+          <div class="kv">
+            <div class="k">Token</div><div>GuoGeQiuNian (过个球年) / <b>$GGQN</b></div>
+            <div class="k">Contract</div>
+            <div>
+              <div class="copyline">
+                <code id="contract">0x522798dB5FACF944e57400356FaB78929104676</code>
+                <button class="copybtn" onclick="copyText('contract')">Copy</button>
+              </div>
+              <div class="small">Always verify this exact contract address.</div>
+            </div>
+            <div class="k">Chain</div><div>BNB Smart Chain (BSC)</div>
+            <div class="k">Standard</div><div>BEP-20 (ERC-20 compatible)</div>
+            <div class="k">Total Supply</div><div><b>1,000,000,000</b> (fixed supply)</div>
+            <div class="k">Verification</div><div>Contract source code verified on BscScan (<b>Exact Match</b>)</div>
+            <div class="k">Controls</div><div>Standard token only; <b>no mint / no admin / no tax control functions</b></div>
+          </div>
+
+          <div class="ok">
+            <b>For reviewers:</b> Official links + logo are maintained on this page. X/Twitter has a pinned announcement for public verification.
+          </div>
+
+          <h2 id="about">About</h2>
+          <div class="muted">
+            <b>$GGQN</b> is a community meme token on BNB Chain, inspired by the festive Chinese New Year spirit and football/WC season excitement.
             This project is for entertainment and community interaction.
           </div>
 
-          <h2 id="basics-en">2) Contract & Token Basics</h2>
-          <div class="kv">
-            <div class="k">Chain</div><div>BNB Smart Chain (BSC)</div>
-            <div class="k">Standard</div><div>BEP-20 (ERC-20 compatible)</div>
-            <div class="k">Contract</div><div><code>0x522798dB5FACF944e57400356FaB78929104676</code></div>
-            <div class="k">Total Supply</div><div>1,000,000,000 (fixed supply)</div>
-            <div class="k">Decimals</div><div>18</div>
-            <div class="k">Source Verification</div><div>Verified on BscScan (Exact Match)</div>
-            <div class="k">Controls</div><div>Standard ERC-20 functions only; no mint/admin/tax control functions</div>
-          </div>
-
-          <h2 id="tokenomics-en">3) Tokenomics (Simple)</h2>
+          <h2 id="tokenomics">Tokenomics (Simple)</h2>
           <ul>
-            <li>Fixed supply at <b>1,000,000,000</b> tokens.</li>
-            <li>No protocol-level tax: no contract tax functions are present.</li>
-            <li>Community-driven: distribution/marketing are community-focused.</li>
+            <li>Fixed supply: <b>1,000,000,000</b>.</li>
+            <li>No protocol-level tax (no tax control functions in the contract).</li>
+            <li>Community-driven distribution and engagement.</li>
           </ul>
 
-          <h2 id="howtobuy-en">4) How to Buy (General Guide)</h2>
+          <h2 id="security">Security & Risk Disclosure</h2>
+          <div class="warn">
+            Crypto assets are volatile. This page is informational and not investment advice. DYOR.
+            Beware of impersonators and unofficial links.
+          </div>
+
+          <h2 id="how-to-buy">How to Buy (General Guide)</h2>
           <ol>
-            <li>Install a wallet: MetaMask / Trust Wallet (or similar).</li>
+            <li>Install a wallet (MetaMask / Trust Wallet, etc.).</li>
             <li>Switch network to <b>BNB Smart Chain (BSC)</b>.</li>
             <li>Prepare a small amount of <b>BNB</b> for gas fees.</li>
-            <li>Use a DEX on BSC and swap to <b>$过个球年</b> (verify the contract address above).</li>
+            <li>Swap on a BSC DEX and verify the contract address above.</li>
           </ol>
-          <div class="warn">
-            <b>Risk reminder:</b> Crypto assets are volatile. This project provides no investment advice.
-            Always verify the contract address and official links. DYOR.
-          </div>
+          <div class="small">Note: DEX swap parameters (e.g., slippage) should follow the DEX interface prompts.</div>
 
-          <h2 id="roadmap-en">5) Roadmap (Light)</h2>
+          <h2 id="roadmap">Roadmap (Light)</h2>
           <ul>
-            <li><b>Phase 1:</b> Contract deployment + website + branding.</li>
+            <li><b>Phase 1:</b> Contract + website + branding.</li>
             <li><b>Phase 2:</b> Community growth & social engagement.</li>
-            <li><b>Phase 3:</b> Apply for token profile listing updates (logo/links).</li>
-            <li><b>Phase 4:</b> Explore community utilities (mini tools / NFTs / games).</li>
+            <li><b>Phase 3:</b> Token profile listing updates (links/logo).</li>
+            <li><b>Phase 4:</b> Explore community utilities (tools / NFTs / mini-games).</li>
           </ul>
 
-          <h2 id="contact-en">6) Contact</h2>
+          <h2 id="changelog">Changelog</h2>
+          <ul>
+            <li><b>v1.0</b> — Initial docs + verification links.</li>
+            <li><b>v1.1</b> — Add stable SVG logo link (CDN) and pinned X verification.</li>
+          </ul>
+
+          <h2 id="contact">Contact</h2>
           <div class="muted">
-            For verification or partnership inquiries, please use the official email and social links on this page.
+            For verification or partnership inquiries, use the official email and links listed on this page.
           </div>
         </div>
 
-        <!-- CHINESE -->
+        <!-- ZH -->
         <div id="lang-zh" class="lang-block">
-          <h1>1）项目概述</h1>
+          <h1 id="verification-zh">官方核验（唯一可信入口）</h1>
           <div class="muted">
-            <b>过个球年</b> / <b>$过个球年</b> 是部署在 BNB Smart Chain 的社区 Meme 代币，
-            以“春节喜庆 + 足球/世界杯热度”为灵感，用于娱乐与社区互动。
+            本页面是 <b>过个球年（GuoGeQiuNian）/$GGQN</b> 的官方资料与链接汇总（Single Source of Truth）。
+            其他地方出现的“官方链接”，请以本页与推特置顶公告为准进行核验。
           </div>
 
-          <h2 id="basics-zh">2）合约与代币信息</h2>
+          <div class="pillRow">
+            <span class="pill">BNB Smart Chain（BSC）</span>
+            <span class="pill">BEP-20</span>
+            <span class="pill">固定总量</span>
+            <span class="pill">合约已验证</span>
+          </div>
+
+          <h2 id="basics-zh">合约与代币信息</h2>
           <div class="kv">
+            <div class="k">代币</div><div>过个球年（GuoGeQiuNian）/ <b>$GGQN</b></div>
+            <div class="k">合约地址</div>
+            <div>
+              <div class="copyline">
+                <code id="contract2">0x522798dB5FACF944e57400356FaB78929104676</code>
+                <button class="copybtn" onclick="copyText('contract2')">复制</button>
+              </div>
+              <div class="small">务必核对合约地址完全一致。</div>
+            </div>
             <div class="k">网络</div><div>BNB Smart Chain（BSC）</div>
             <div class="k">标准</div><div>BEP-20（兼容 ERC-20）</div>
-            <div class="k">合约地址</div><div><code>0x522798dB5FACF944e57400356FaB78929104676</code></div>
-            <div class="k">总量</div><div>1,000,000,000（固定总量）</div>
-            <div class="k">小数位</div><div>18</div>
-            <div class="k">合约验证</div><div>BscScan 已验证（Exact Match）</div>
-            <div class="k">权限/控制</div><div>仅标准 ERC-20 方法；无增发/管理员/税费控制函数</div>
+            <div class="k">总量</div><div><b>1,000,000,000</b>（固定总量）</div>
+            <div class="k">合约验证</div><div>BscScan 已验证（<b>Exact Match</b>）</div>
+            <div class="k">权限/控制</div><div>标准代币；<b>无增发/无管理员/无税费控制函数</b></div>
           </div>
 
-          <h2 id="tokenomics-zh">3）代币经济模型（简版）</h2>
-          <ul>
-            <li>固定总量 <b>10 亿</b>。</li>
-            <li>合约层面无税费：无税费相关控制函数。</li>
-            <li>社区驱动：传播与活动以社区为主。</li>
-          </ul>
-
-          <h2 id="howtobuy-zh">4）如何购买（通用指引）</h2>
-          <ol>
-            <li>安装钱包：MetaMask / Trust Wallet 等。</li>
-            <li>切换网络到 <b>BSC</b>。</li>
-            <li>准备少量 <b>BNB</b> 作为 Gas。</li>
-            <li>在 BSC 的 DEX 里 Swap 到 <b>$过个球年</b>（务必核对上方合约地址）。</li>
-          </ol>
-          <div class="warn">
-            <b>风险提示：</b>加密资产波动大，本项目不构成任何投资建议。
-            请务必核对合约地址与本页“官方链接”，谨防假冒。DYOR。
+          <div class="ok">
+            <b>给审核人员：</b>本页集中维护官网/社媒/Logo等官方链接，并提供推特置顶公告用于公开核验。
           </div>
 
-          <h2 id="roadmap-zh">5）路线图（轻量版）</h2>
-          <ul>
-            <li><b>阶段 1：</b>部署合约 + 官网 + 品牌素材。</li>
-            <li><b>阶段 2：</b>社区增长与社媒运营。</li>
-            <li><b>阶段 3：</b>申请第三方信息展示更新（logo/链接）。</li>
-            <li><b>阶段 4：</b>探索社区小工具 / NFT / 小游戏等玩法。</li>
-          </ul>
-
-          <h2 id="contact-zh">6）联系方式</h2>
+          <h2 id="about-zh">项目简介</h2>
           <div class="muted">
-            如需核验或合作沟通，请以本页官方邮箱与社媒链接为准。
+            <b>$GGQN</b> 是部署在 BNB 链上的社区 Meme 代币，
+            灵感来自“春节喜庆氛围 + 足球/世界杯热度”，用于娱乐与社区互动。
+          </div>
+
+          <h2 id="tokenomics-zh">代币模型（简版）</h2>
+          <ul>
+            <li>固定总量：<b>10 亿</b>。</li>
+            <li>合约层面无税费（无税费控制函数）。</li>
+            <li>社区驱动：以社区互动与传播为主。</li>
+          </ul>
+
+          <h2 id="security-zh">安全与风险提示</h2>
+          <div class="warn">
+            加密资产波动大。本页仅做信息展示，不构成投资建议。DYOR。
+            谨防假冒与非官方链接。
+          </div>
+
+          <h2 id="how-to-buy-zh">如何购买（通用指引）</h2>
+          <ol>
+            <li>安装钱包（MetaMask / Trust Wallet 等）。</li>
+            <li>切换网络到 <b>BSC</b>。</li>
+            <li>准备少量 <b>BNB</b> 用作 Gas。</li>
+            <li>在 BSC 的 DEX 交易并核对上方合约地址。</li>
+          </ol>
+          <div class="small">提示：滑点等参数以 DEX 界面提示为准。</div>
+
+          <h2 id="roadmap-zh">路线图（轻量版）</h2>
+          <ul>
+            <li><b>阶段 1：</b>合约 + 官网 + 品牌素材。</li>
+            <li><b>阶段 2：</b>社区增长与社媒运营。</li>
+            <li><b>阶段 3：</b>第三方展示更新（链接/Logo）。</li>
+            <li><b>阶段 4：</b>探索社区玩法（工具 / NFT / 小游戏）。</li>
+          </ul>
+
+          <h2 id="changelog-zh">更新记录</h2>
+          <ul>
+            <li><b>v1.0</b>：上线 Docs + 核验信息。</li>
+            <li><b>v1.1</b>：补充稳定 SVG Logo 链接（CDN）与推特置顶核验。</li>
+          </ul>
+
+          <h2 id="contact-zh">联系方式</h2>
+          <div class="muted">
+            如需核验或合作，请以本页官方邮箱与链接为准。
           </div>
         </div>
       </div>
 
       <!-- RIGHT: OFFICIAL LINKS -->
       <div class="card">
-        <h2>Official Links (Verifiable)</h2>
-        <div class="kv">
-          <div class="k">Website</div><div><a href="https://ggqn.github.io/guogeqiunian-site/" target="_blank" rel="noreferrer">ggqn.github.io/guogeqiunian-site/</a></div>
-          <div class="k">Email</div><div><a href="mailto:ggqingn@gmail.com">ggqingn@gmail.com</a></div>
-          <div class="k">X (Twitter)</div><div><a href="https://x.com/guogeqiunian" target="_blank" rel="noreferrer">x.com/guogeqiunian</a></div>
-          <div class="k">Telegram</div><div><a href="https://t.me/guogeqiunian" target="_blank" rel="noreferrer">t.me/guogeqiunian</a></div>
-          <div class="k">GitHub</div><div><a href="https://github.com/GGQN/ggqn-assets" target="_blank" rel="noreferrer">github.com/GGQN/ggqn-assets</a></div>
-          <div class="k">Logo (32×32)</div><div><a href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" target="_blank" rel="noreferrer">raw.githubusercontent.com/.../logo-32.png</a></div>
-          <div class="k">BscScan</div><div><a href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676" target="_blank" rel="noreferrer">Token page</a></div>
+        <h1 id="official-links">Official Links (Verifiable)</h1>
+        <div class="muted">
+          Links below are maintained as the official references for $GGQN.
         </div>
 
-        <h2 style="margin-top:16px;">Pinned Announcement</h2>
-        <div class="muted">
-          We publish and maintain all official links on this Docs page. If you see any other “official” links, please verify here.
+        <h2 style="margin-top:14px;">Project</h2>
+        <div class="kv">
+          <div class="k">Website</div>
+          <div><a href="https://ggqn.github.io/guogeqiunian-site/" target="_blank" rel="noreferrer">https://ggqn.github.io/guogeqiunian-site/</a></div>
+
+          <div class="k">Docs (this page)</div>
+          <div><a href="https://ggqn.github.io/guogeqiunian-site/docs.html" target="_blank" rel="noreferrer">https://ggqn.github.io/guogeqiunian-site/docs.html</a></div>
+
+          <div class="k">BscScan Token</div>
+          <div><a href="https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676" target="_blank" rel="noreferrer">https://bscscan.com/token/0x522798ddb5facf944e57400356fab78929104676</a></div>
+        </div>
+
+        <h2>Social</h2>
+        <div class="kv">
+          <div class="k">X (Twitter)</div>
+          <div><a href="https://x.com/guogeqiunian" target="_blank" rel="noreferrer">https://x.com/guogeqiunian</a></div>
+
+          <div class="k">Pinned X Announcement</div>
+          <div><a href="https://x.com/guogeqiunian/status/2020070233764249711" target="_blank" rel="noreferrer">https://x.com/guogeqiunian/status/2020070233764249711</a></div>
+
+          <div class="k">Telegram</div>
+          <div><a href="https://t.me/guogeqiunian" target="_blank" rel="noreferrer">https://t.me/guogeqiunian</a></div>
+        </div>
+
+        <h2>Repository & Contact</h2>
+        <div class="kv">
+          <div class="k">GitHub</div>
+          <div><a href="https://github.com/GGQN/ggqn-assets" target="_blank" rel="noreferrer">https://github.com/GGQN/ggqn-assets</a></div>
+
+          <div class="k">Official Email</div>
+          <div><a href="mailto:ggqingn@gmail.com">ggqingn@gmail.com</a></div>
+        </div>
+
+        <h2>Logo (32×32)</h2>
+        <div class="kv">
+          <div class="k">PNG</div>
+          <div><a href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" target="_blank" rel="noreferrer">https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png</a></div>
+
+          <div class="k">SVG (stable CDN)</div>
+          <div><a href="https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.svg" target="_blank" rel="noreferrer">https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.svg</a></div>
+        </div>
+
+        <div class="warn" style="margin-top:14px;">
+          <b>Anti-impersonation notice:</b> Only trust links from this Docs page and the pinned X announcement.
         </div>
 
         <div class="footer">
-          © 2026 GuoGeQiuNian (过个球年) · Docs v1
+          Last updated: <span id="lastUpdated"></span> · Docs v1.1
         </div>
       </div>
     </div>
@@ -204,14 +325,28 @@
         zh.classList.remove('show'); en.classList.add('show');
         bzh.classList.remove('active'); ben.classList.add('active');
       }
-      // optional: remember
       try { localStorage.setItem('ggqn_lang', lang); } catch(e){}
     }
+
+    function copyText(id){
+      const el = document.getElementById(id);
+      const text = el ? el.innerText : '';
+      if(!text) return;
+      navigator.clipboard.writeText(text).then(()=>{}).catch(()=>{});
+    }
+
     (function(){
+      // english default
       try {
         const saved = localStorage.getItem('ggqn_lang');
         if(saved === 'zh') setLang('zh');
       } catch(e){}
+      // last updated (local display)
+      const d = new Date();
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth()+1).padStart(2,'0');
+      const dd = String(d.getDate()).padStart(2,'0');
+      document.getElementById('lastUpdated').textContent = `${yyyy}-${mm}-${dd}`;
     })();
   </script>
 </body>
