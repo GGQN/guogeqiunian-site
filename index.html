@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>过个球年（GuoGeQiuNian）— 官方网站</title>
-  <meta name="description" content="过个球年（GuoGeQiuNian）/过个球年｜BNB Smart Chain（BEP-20）社区 Meme 代币，总量 10 亿，固定总量，无增发、无管理员、无税费控制函数。" />
+  <meta name="description" content="过个球年（GuoGeQiuNian）｜BNB Smart Chain（BEP-20）社区 Meme 代币，总量 10 亿，固定总量，无增发、无管理员、无税费控制函数。" />
 
   <!-- ===== 分享预览 ===== -->
   <meta property="og:title" content="过个球年（GuoGeQiuNian）— 官方网站" />
@@ -14,25 +14,21 @@
   <meta property="og:image" content="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- ===== 站点图标（建议用稳定 SVG CDN，避免缓存） ===== -->
+  <!-- ===== 站点图标（稳定 SVG CDN） ===== -->
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.svg" type="image/svg+xml" />
   <link rel="alternate icon" type="image/png" href="https://raw.githubusercontent.com/GGQN/ggqn-assets/main/logo-32.png" />
 
   <style>
     :root{
       --bg0:#020617;
-      --bg1:#050b18;
       --card: rgba(17,24,39,.72);
-      --card2: rgba(10,20,36,.68);
       --border: rgba(255,255,255,.10);
-      --border2: rgba(255,255,255,.14);
       --text:#e5e7eb;
       --muted:#9ca3af;
       --title:#f9fafb;
 
       --accent:#22c55e;
       --accent2:#06b6d4;
-      --accentGlow: rgba(34,197,94,.35);
 
       --radius:18px;
       --radius2:14px;
@@ -52,35 +48,16 @@
       overflow-x:hidden;
     }
     a{color:inherit;text-decoration:none}
-    a:hover{opacity:.95;text-decoration:underline}
+    a:hover{text-decoration:underline}
 
-    .wrap{
-      max-width:1180px;
-      margin:0 auto;
-      padding:26px 16px 70px;
-    }
+    .wrap{max-width:1180px;margin:0 auto;padding:26px 16px 70px}
 
-    /* ===== 顶部 ===== */
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:18px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      min-width:240px;
-    }
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:240px}
     .brand .logo{
-      width:42px;height:42px;
-      border-radius:999px;
-      overflow:hidden;
+      width:42px;height:42px;border-radius:999px;overflow:hidden;
       border:2px solid rgba(255,255,255,.18);
       box-shadow: 0 0 22px rgba(255,255,255,.18);
-      flex:0 0 auto;
       background: rgba(255,255,255,.04);
       display:grid;place-items:center;
     }
@@ -88,34 +65,11 @@
     .brand .name{font-weight:800;color:var(--title);line-height:1}
     .brand .sub{font-size:12px;color:var(--muted);margin-top:4px}
 
-    .nav{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      font-size:14px;
-      color:var(--muted);
-    }
-    .nav a{
-      padding:6px 8px;
-      border-radius:10px;
-      border:1px solid transparent;
-    }
-    .nav a:hover{
-      border-color: rgba(34,197,94,.25);
-      background: rgba(34,197,94,.06);
-      color:var(--title);
-      text-decoration:none;
-    }
+    .nav{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end;font-size:14px;color:var(--muted)}
+    .nav a{padding:6px 8px;border-radius:10px;border:1px solid transparent}
+    .nav a:hover{border-color: rgba(34,197,94,.25);background: rgba(34,197,94,.06);color:var(--title);text-decoration:none}
 
-    /* ===== Hero 双列（左主卡 + 右关键信息）===== */
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.2fr .9fr;
-      gap:18px;
-      align-items:start;
-      margin-top:10px;
-    }
+    .heroGrid{display:grid;grid-template-columns: 1.2fr .9fr;gap:18px;align-items:start;margin-top:10px}
 
     .card{
       background: var(--card);
@@ -126,166 +80,62 @@
     }
     .card.pad{padding:18px 18px 16px}
 
-    .heroTitle{
-      font-size:42px;
-      font-weight:900;
-      color:var(--title);
-      letter-spacing:.5px;
-      margin:4px 0 12px;
-    }
-    .heroDesc{
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.8;
-      margin:0 0 14px;
-    }
-    .chips{
-      display:flex;flex-wrap:wrap;gap:10px;
-      margin:12px 0 14px;
-    }
+    .heroTitle{font-size:42px;font-weight:900;color:var(--title);letter-spacing:.5px;margin:4px 0 12px}
+    .heroDesc{color:var(--muted);font-size:14px;line-height:1.8;margin:0 0 14px}
+
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 14px}
     .chip{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
+      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.12);
       background: rgba(2,6,23,.35);
-      color: #d1d5db;
-      font-size:12px;
+      color: #d1d5db;font-size:12px;
     }
-    .dot{
-      width:8px;height:8px;border-radius:50%;
-      background: var(--accent);
-      box-shadow: 0 0 14px var(--accentGlow);
-    }
+    .dot{width:8px;height:8px;border-radius:50%;background: var(--accent)}
 
-    .actions{
-      display:flex;flex-wrap:wrap;gap:10px;align-items:center;
-      margin-top:8px;
-    }
+    .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:8px}
     .btn{
-      appearance:none;border:1px solid transparent;
-      border-radius:999px;
-      padding:10px 14px;
-      font-size:14px;
-      cursor:pointer;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      user-select:none;
-      white-space:nowrap;
+      appearance:none;border:1px solid transparent;border-radius:999px;padding:10px 14px;font-size:14px;
+      cursor:pointer;display:inline-flex;align-items:center;gap:8px;user-select:none;white-space:nowrap
     }
     .btnPrimary{
       background: linear-gradient(135deg, var(--accent2), var(--accent));
-      color:#041016;
-      font-weight:800;
+      color:#041016;font-weight:800;
       box-shadow: 0 14px 34px rgba(34,197,94,.20);
     }
-    .btnPrimary:hover{transform: translateY(-1px)}
-    .btnGhost{
-      background: rgba(2,6,23,.35);
-      border-color: rgba(255,255,255,.14);
-      color: #d1d5db;
-    }
-    .btnGhost:hover{
-      border-color: rgba(34,197,94,.28);
-      color: var(--title);
-    }
-    .hint{
-      margin-top:10px;
-      color: rgba(229,231,235,.75);
-      font-size:12px;
-    }
+    .btnGhost{background: rgba(2,6,23,.35);border-color: rgba(255,255,255,.14);color: #d1d5db}
+    .hint{margin-top:10px;color: rgba(229,231,235,.75);font-size:12px}
 
-    /* ===== 右侧关键信息 ===== */
-    .kvTitle{
-      font-weight:800;
-      color:var(--title);
-      margin:2px 0 12px;
-      font-size:16px;
-    }
-    .kvRow{
-      display:grid;
-      grid-template-columns: 110px 1fr;
-      gap:10px;
-      padding:10px 0;
-      border-bottom:1px dashed rgba(255,255,255,.12);
-      align-items:center;
-    }
+    .kvTitle{font-weight:800;color:var(--title);margin:2px 0 12px;font-size:16px}
+    .kvRow{display:grid;grid-template-columns: 110px 1fr;gap:10px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.12);align-items:center}
     .kvRow:last-child{border-bottom:none}
     .kvKey{color:rgba(229,231,235,.7);font-size:12px}
     .kvVal{font-size:13px;color:var(--title);text-align:right}
     .mono{
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      word-break: break-all;
-      font-size:12px;
-      color:#dbeafe;
+      word-break: break-all;font-size:12px;color:#dbeafe;
     }
     .copyMini{
-      margin-left:10px;
-      padding:6px 10px;
-      font-size:12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(2,6,23,.35);
-      color:#d1d5db;
-      cursor:pointer;
-    }
-    .copyMini:hover{border-color: rgba(34,197,94,.28); color:var(--title)}
-
-    /* ===== 通用 Section ===== */
-    .section{
-      margin-top:18px;
-    }
-    .sectionHead{
-      display:flex;align-items:end;justify-content:space-between;gap:12px;
-      margin-bottom:10px;
-    }
-    .sectionHead h2{
-      margin:0;
-      font-size:18px;
-      color:var(--title);
-      letter-spacing:.3px;
-    }
-    .sectionHead p{
-      margin:0;
-      color:rgba(229,231,235,.6);
-      font-size:12px;
+      margin-left:10px;padding:6px 10px;font-size:12px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);background: rgba(2,6,23,.35);color:#d1d5db;cursor:pointer;
     }
 
-    /* ===== Token 信息块（两列）===== */
-    .grid2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
+    .section{margin-top:18px}
+    .sectionHead{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:10px}
+    .sectionHead h2{margin:0;font-size:18px;color:var(--title);letter-spacing:.3px}
+    .sectionHead p{margin:0;color:rgba(229,231,235,.6);font-size:12px}
+
+    .grid2{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
     .miniCard{
       background: rgba(2,6,23,.32);
       border:1px solid rgba(255,255,255,.12);
       border-radius: var(--radius2);
       padding:14px 14px;
     }
-    .miniTitle{
-      color:var(--title);
-      font-weight:800;
-      margin:0 0 10px;
-      font-size:14px;
-    }
-    .list{
-      margin:0;padding:0;list-style:none;
-      color:rgba(229,231,235,.78);
-      font-size:13px;
-      line-height:1.9;
-    }
+    .miniTitle{color:var(--title);font-weight:800;margin:0 0 10px;font-size:14px}
+    .list{margin:0;padding:0;list-style:none;color:rgba(229,231,235,.78);font-size:13px;line-height:1.9}
     .list b{color:var(--title)}
-    .note{
-      margin-top:12px;
-      color:rgba(229,231,235,.68);
-      font-size:12px;
-    }
+    .note{margin-top:12px;color:rgba(229,231,235,.68);font-size:12px}
 
-    /* ===== 官方链接汇总（防伪）——单独一整块 ===== */
     .verifyWrap{
       padding:16px 16px 14px;
       background: linear-gradient(180deg, rgba(34,197,94,.10), rgba(2,6,23,.20));
@@ -293,109 +143,41 @@
     }
     .verifyTop{
       display:flex;align-items:center;justify-content:space-between;gap:14px;
-      padding:12px 12px;
-      border-radius: 14px;
-      background: rgba(2,6,23,.28);
-      border:1px solid rgba(34,197,94,.18);
-      margin-bottom:10px;
+      padding:12px 12px;border-radius: 14px;background: rgba(2,6,23,.28);
+      border:1px solid rgba(34,197,94,.18);margin-bottom:10px;
     }
-    .verifyTop .left{
-      display:flex;flex-direction:column;gap:2px;
-      min-width:260px;
-    }
-    .verifyTop .ttl{
-      font-weight:900;color:var(--title);font-size:14px;
-    }
-    .verifyTop .sub{
-      color: rgba(229,231,235,.70);
-      font-size:12px;
-    }
-    .verifyTop .right{
-      text-align:right;
-      color: rgba(229,231,235,.68);
-      font-size:12px;
-      line-height:1.6;
-      white-space:nowrap;
-    }
+    .verifyTop .left{display:flex;flex-direction:column;gap:2px;min-width:260px}
+    .verifyTop .ttl{font-weight:900;color:var(--title);font-size:14px}
+    .verifyTop .sub{color: rgba(229,231,235,.70);font-size:12px}
+    .verifyTop .right{text-align:right;color: rgba(229,231,235,.68);font-size:12px;line-height:1.6;white-space:nowrap}
 
-    .verifyRows{
-      display:grid;
-      gap:10px;
-    }
+    .verifyRows{display:grid;gap:10px}
     .vrow{
-      display:grid;
-      grid-template-columns: 160px 1fr;
-      gap:10px;
-      align-items:center;
-      padding:10px 12px;
-      border-radius: 14px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(2,6,23,.28);
+      display:grid;grid-template-columns: 160px 1fr;gap:10px;align-items:center;
+      padding:10px 12px;border-radius: 14px;border:1px solid rgba(255,255,255,.12);background: rgba(2,6,23,.28);
     }
-    .vkey{
-      color: rgba(229,231,235,.65);
-      font-size:13px;
-    }
+    .vkey{color: rgba(229,231,235,.65);font-size:13px}
     .vval{
-      text-align:right;
-      font-size:13px;
-      color: #86efac;
-      word-break: break-all;
+      text-align:right;font-size:13px;color: #86efac;word-break: break-all;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
     .vval a{color:#86efac}
-    .vval a:hover{text-decoration:underline}
-    .verifyFoot{
-      margin-top:10px;
-      display:flex;
-      justify-content:flex-end;
-      color: rgba(229,231,235,.55);
-      font-size:12px;
-    }
+    .verifyFoot{margin-top:10px;display:flex;justify-content:flex-end;color: rgba(229,231,235,.55);font-size:12px}
 
-    /* ===== HowTo / Roadmap / Community ===== */
-    .ol{
-      margin:8px 0 0 18px;
-      color: rgba(229,231,235,.78);
-      font-size:13px;
-      line-height:1.9;
-    }
+    .ol{margin:8px 0 0 18px;color: rgba(229,231,235,.78);font-size:13px;line-height:1.9}
     .risk{
-      margin-top:12px;
-      border:1px dashed rgba(248,113,113,.55);
-      background: rgba(127,29,29,.20);
-      color:#fecaca;
-      padding:10px 12px;
-      border-radius: 14px;
-      font-size:12px;
-      line-height:1.7;
+      margin-top:12px;border:1px dashed rgba(248,113,113,.55);background: rgba(127,29,29,.20);
+      color:#fecaca;padding:10px 12px;border-radius: 14px;font-size:12px;line-height:1.7;
     }
-    .bullets{
-      margin:8px 0 0 0;
-      padding:0;
-      list-style:none;
-      color: rgba(229,231,235,.78);
-      font-size:13px;
-      line-height:1.9;
-    }
+    .bullets{margin:8px 0 0 0;padding:0;list-style:none;color: rgba(229,231,235,.78);font-size:13px;line-height:1.9}
     .bullets li{position:relative;padding-left:18px;margin:6px 0}
     .bullets li:before{
-      content:"";
-      position:absolute;left:0;top:10px;
-      width:8px;height:8px;border-radius:50%;
-      border:1px solid rgba(34,197,94,.55);
-      background: rgba(34,197,94,.15);
-      box-shadow: 0 0 12px rgba(34,197,94,.16);
+      content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:50%;
+      border:1px solid rgba(34,197,94,.55);background: rgba(34,197,94,.15);
     }
 
-    footer{
-      margin-top:16px;
-      text-align:center;
-      color: rgba(229,231,235,.55);
-      font-size:12px;
-    }
+    footer{margin-top:16px;text-align:center;color: rgba(229,231,235,.55);font-size:12px}
 
-    /* ===== 响应式 ===== */
     @media (max-width: 980px){
       .heroGrid{grid-template-columns: 1fr}
       .kvRow{grid-template-columns: 120px 1fr}
@@ -413,22 +195,20 @@
 <body>
   <div class="wrap" id="top">
 
-    <!-- 顶部 -->
     <div class="topbar">
       <a class="brand" href="#top">
         <div class="logo">
-          <!-- 统一用稳定 SVG CDN -->
-          <img id="siteLogo" src="https://cdn.jsdelivr.net/gh//-assets@main/logo-32.svg" alt="过个球年 Logo" />
+          <img id="siteLogo" src="https://cdn.jsdelivr.net/gh/GGQN/ggqn-assets@main/logo-32.svg" alt="过个球年 Logo" />
         </div>
         <div>
           <div class="name">过个球年（GuoGeQiuNian）</div>
-          <div class="sub">BNB Smart Chain · BEP-20 · Ticker: $</div>
+          <div class="sub">BNB Smart Chain · BEP-20 · 官方网站</div>
         </div>
       </a>
 
       <div class="nav">
         <a href="#about">项目介绍</a>
-        <a href="docs.html">Docs / Whitepaper</a>
+        <a href="docs.html">Docs / 白皮书</a>
         <a href="#tokenomics">代币信息</a>
         <a href="#verify">官方链接</a>
         <a href="#howto">如何购买</a>
@@ -437,21 +217,19 @@
       </div>
     </div>
 
-    <!-- Hero -->
     <div class="heroGrid">
-      <!-- 左：主卡 -->
       <div class="card pad">
         <div class="heroTitle">用一颗球，跨过这一年。</div>
         <p class="heroDesc">
-          「过个球年（GuoGeQiuNian）/ 过个球年」是部署在 BNB Smart Chain（BEP-20）上的节日 & 世界杯主题中文 Meme 代币，
-          总量 10 亿，固定总量，无增发、无管理员、无税费控制函数，社区自发建设，一起踢走霉运，迎接新一年的好运气。
+          「过个球年（GuoGeQiuNian）」是部署在 BNB Smart Chain（BEP-20）上的节日 & 世界杯主题中文 Meme 代币，
+          总量 10 亿，固定总量，无增发、无管理员、无税费控制函数，社区自发建设。
         </p>
 
         <div class="chips">
           <span class="chip"><span class="dot"></span>BNB Smart Chain · BEP-20</span>
-          <span class="chip">Ticker: $GGQN</span>
           <span class="chip">总量：1,000,000,000</span>
           <span class="chip">小数位：18</span>
+          <span class="chip">合约已验证</span>
         </div>
 
         <div class="actions">
@@ -463,11 +241,10 @@
         </div>
 
         <div class="hint">
-          提示：先连接钱包并切换到 BNB Smart Chain；若交易失败可把滑点调到 1%～5% 再试（以 DEX 提示为准）。
+          提示：先连接钱包并切换到 BNB Smart Chain；若交易失败可调整滑点（以 DEX 提示为准）。
         </div>
       </div>
 
-      <!-- 右：合约关键信息 -->
       <div class="card pad">
         <div class="kvTitle">合约关键信息</div>
 
@@ -485,8 +262,8 @@
         </div>
 
         <div class="kvRow">
-          <div class="kvKey">名称 / 代号</div>
-          <div class="kvVal">过个球年（GuoGeQiuNian）/ $过个球年</div>
+          <div class="kvKey">代币名称</div>
+          <div class="kvVal">过个球年（GuoGeQiuNian）</div>
         </div>
 
         <div class="kvRow">
@@ -500,13 +277,12 @@
         </div>
 
         <div class="kvRow">
-          <div class="kvKey">合约说明</div>
-          <div class="kvVal">No mint / No admin / No tax controls</div>
+          <div class="kvKey">权限说明</div>
+          <div class="kvVal">无增发 / 无管理员 / 无税费控制</div>
         </div>
       </div>
     </div>
 
-    <!-- 项目介绍 -->
     <div class="section card pad" id="about">
       <div class="sectionHead">
         <h2>项目介绍</h2>
@@ -518,7 +294,6 @@
       </div>
     </div>
 
-    <!-- 代币信息 -->
     <div class="section card pad" id="tokenomics">
       <div class="sectionHead">
         <h2>代币信息</h2>
@@ -530,8 +305,8 @@
           <div class="miniTitle">基础参数</div>
           <ul class="list">
             <li><b>链：</b>BNB Smart Chain（BSC）</li>
-            <li><b>标准：</b>BEP-20（ERC-20 compatible）</li>
-            <li><b>名称 / 代号：</b>过个球年（GuoGeQiuNian）/ 过个球年</li>
+            <li><b>标准：</b>BEP-20（兼容 ERC-20）</li>
+            <li><b>名称：</b>过个球年（GuoGeQiuNian）</li>
             <li><b>小数位：</b>18</li>
           </ul>
         </div>
@@ -551,7 +326,6 @@
       </div>
     </div>
 
-    <!-- ✅ 官方链接汇总（防伪） -->
     <div class="section card verifyWrap" id="verify">
       <div class="sectionHead" style="margin-bottom:12px;">
         <h2>官方链接汇总（防伪）</h2>
@@ -580,7 +354,7 @@
         </div>
 
         <div class="vrow">
-          <div class="vkey">Docs / Whitepaper</div>
+          <div class="vkey">Docs / 白皮书</div>
           <div class="vval"><a target="_blank" rel="noopener" href="https://ggqn.github.io/guogeqiunian-site/docs.html">https://ggqn.github.io/guogeqiunian-site/docs.html</a></div>
         </div>
 
@@ -640,7 +414,6 @@
       <div class="verifyFoot">© 2026 过个球年（GuoGeQiuNian）</div>
     </div>
 
-    <!-- 如何购买 -->
     <div class="section card pad" id="howto">
       <div class="sectionHead">
         <h2>如何购买</h2>
@@ -671,7 +444,6 @@
       </div>
     </div>
 
-    <!-- 路线图 -->
     <div class="section card pad" id="roadmap">
       <div class="sectionHead">
         <h2>路线图</h2>
@@ -686,7 +458,6 @@
       </ul>
     </div>
 
-    <!-- 社区 -->
     <div class="section card pad" id="community">
       <div class="sectionHead">
         <h2>社区</h2>
@@ -734,4 +505,3 @@
   </script>
 </body>
 </html>
-
